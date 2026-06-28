@@ -26,6 +26,11 @@ jobs:
       - uses: actions/checkout@v6
       - uses: ./.github/actions/prepare
       - name: Build website
+        env:
+          VITE_API_URL: https://api.commentvia.com
+          VITE_APP_URL: https://app.commentvia.com
+          VITE_COMMENTVIA_LOCAL: "false"
+          VITE_WEBSITE_URL: https://commentvia.com
         run: bun run build:website
       - name: Deploy website
         env:
@@ -48,6 +53,11 @@ jobs:
       - uses: actions/checkout@v6
       - uses: ./.github/actions/prepare
       - name: Build app
+        env:
+          VITE_API_URL: https://api.commentvia.com
+          VITE_APP_URL: https://app.commentvia.com
+          VITE_COMMENTVIA_LOCAL: "false"
+          VITE_WEBSITE_URL: https://commentvia.com
         run: bun run build:app
       - name: Deploy app
         env:
@@ -57,6 +67,7 @@ jobs:
         run: |
           mkdir -p /tmp/commentvia-app
           rsync -a --delete apps/spa/build/client/ /tmp/commentvia-app/
+          printf '{"rewrites":[{"source":"/(.*)","destination":"/index.html"}]}\n' > /tmp/commentvia-app/vercel.json
           mkdir -p /tmp/commentvia-app/.vercel
           printf '{"orgId":"%s","projectId":"%s"}\n' "$VERCEL_ORG_ID" "$VERCEL_PROJECT_ID" > /tmp/commentvia-app/.vercel/project.json
           cd /tmp/commentvia-app

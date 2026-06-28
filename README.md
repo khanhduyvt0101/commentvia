@@ -121,8 +121,8 @@ bun run release:version
 The GitHub release workflow can be triggered manually from `main` or by merging a PR with the `release` label. A release commit creates a `v*` tag. That tag triggers CI/CD:
 
 - `@commentvia/api` triggers the Dokploy app stored in `COMMENTVIA_API_DOKPLOY_APP_ID`; Dokploy builds `apps/api/Dockerfile` from the GitHub repository.
-- `@commentvia/website` triggers the Vercel deploy hook stored in `COMMENTVIA_WEBSITE_VERCEL_DEPLOY_HOOK`.
-- `@commentvia/spa` triggers the Vercel deploy hook stored in `COMMENTVIA_APP_VERCEL_DEPLOY_HOOK`.
+- `@commentvia/website` builds `apps/website` and deploys to the Vercel project stored in `COMMENTVIA_WEBSITE_VERCEL_PROJECT_ID`.
+- `@commentvia/spa` builds `apps/spa` and deploys to the Vercel project stored in `COMMENTVIA_APP_VERCEL_PROJECT_ID`.
 
 Required GitHub settings:
 
