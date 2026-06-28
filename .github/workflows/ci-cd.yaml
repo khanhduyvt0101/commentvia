@@ -34,8 +34,9 @@ jobs:
           VERCEL_PROJECT_ID: ${{ vars.COMMENTVIA_WEBSITE_VERCEL_PROJECT_ID }}
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
-          mkdir -p /tmp/commentvia-website/.vercel
+          mkdir -p /tmp/commentvia-website
           rsync -a --delete apps/website/dist/ /tmp/commentvia-website/
+          mkdir -p /tmp/commentvia-website/.vercel
           printf '{"orgId":"%s","projectId":"%s"}\n' "$VERCEL_ORG_ID" "$VERCEL_PROJECT_ID" > /tmp/commentvia-website/.vercel/project.json
           cd /tmp/commentvia-website
           bunx --bun vercel@latest deploy --prod --yes --token "$VERCEL_TOKEN"
@@ -55,8 +56,9 @@ jobs:
           VERCEL_PROJECT_ID: ${{ vars.COMMENTVIA_APP_VERCEL_PROJECT_ID }}
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
-          mkdir -p /tmp/commentvia-app/.vercel
+          mkdir -p /tmp/commentvia-app
           rsync -a --delete apps/spa/build/client/ /tmp/commentvia-app/
+          mkdir -p /tmp/commentvia-app/.vercel
           printf '{"orgId":"%s","projectId":"%s"}\n' "$VERCEL_ORG_ID" "$VERCEL_PROJECT_ID" > /tmp/commentvia-app/.vercel/project.json
           cd /tmp/commentvia-app
           bunx --bun vercel@latest deploy --prod --yes --token "$VERCEL_TOKEN"
