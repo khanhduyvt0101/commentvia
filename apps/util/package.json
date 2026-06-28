@@ -1,0 +1,16 @@
+{
+	"name": "@commentvia/util",
+	"version": "0.0.0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"typecheck": "tsc",
+		"build": "tsc"
+	},
+	"exports": {
+		".": "./src/index.ts"
+	},
+	"dependencies": {
+		"zod": "^4.4.3"
+	}
+}

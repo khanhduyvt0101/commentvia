@@ -1,0 +1,119 @@
+{
+	"nav": {
+		"how": "Comment ça marche",
+		"useCases": "Cas d’utilisation",
+		"pricing": "Tarifs",
+		"faq": "FAQ",
+		"signIn": "Se connecter",
+		"getStarted": "Commencer",
+		"language": "Langue",
+		"menu": "Menu",
+		"closeMenu": "Fermer le menu"
+	},
+	"hero": {
+		"title": "Transformez les commentaires Instagram en liens DM instantanés",
+		"body": "Les spectateurs commentent avec un mot-clé comme outfit, hair ou paint — CommentVia leur envoie immédiatement un DM avec votre lien produit.",
+		"proofs": [
+			"100 % automatisé",
+			"Envoi de DM instantané",
+			"Plus d’enregistrements, de clics et de ventes"
+		],
+		"replyAccount": "yourusername",
+		"replyText": "Consultez votre boîte de réception"
+	},
+	"workflow": {
+		"title": "Lancez un flux commentaire-vers-DM en quelques minutes",
+		"body": "Les meilleurs outils pour créateurs gardent le parcours court : choisissez la publication, faites correspondre le commentaire, envoyez le bon lien, puis voyez ce qui convertit.",
+		"steps": [
+			[
+				"Créer une règle",
+				"Connectez la publication ou le Reel qui attire déjà l’attention."
+			],
+			[
+				"Identifier l’intention",
+				"Utilisez des mots-clés comme outfit, link, recipe, size, price ou paint."
+			],
+			[
+				"Répondre en privé",
+				"Dites aux personnes qui commentent de consulter leur boîte de réception et envoyez-leur le lien d’achat."
+			]
+		]
+	},
+	"useCases": {
+		"title": "Conçu pour les créateurs qui vendent grâce aux commentaires",
+		"items": [
+			[
+				"Lancements mode",
+				"Transformez les commentaires outfit, size et link en liens produits privés."
+			],
+			[
+				"Tutoriels beauté",
+				"Envoyez des listes de produits quand vos abonnés demandent hair, brush ou shade."
+			],
+			[
+				"Produits numériques",
+				"Envoyez des guides, modèles, presets ou lead magnets à partir d’un seul mot-clé."
+			]
+		]
+	},
+	"analytics": {
+		"title": "Identifiez les commentaires qui deviennent des clics",
+		"body": "Suivez les règles actives, les mots-clés correspondants, les DM envoyés et les clics sur les liens pour rendre chaque légende plus performante.",
+		"stats": [
+			["1,234", "Commentaires correspondants"],
+			["892", "DM envoyés"],
+			["38%", "Taux de clics"]
+		]
+	},
+	"trust": {
+		"title": "Conçu autour du parcours officiel Meta",
+		"body": "Utilisez des comptes testeurs pendant la création. Pour un SaaS public, demandez l’examen de l’application Meta et l’accès avancé aux autorisations de commentaires et de messagerie Instagram.",
+		"items": [
+			"Compte Créateur ou Business",
+			"Page Facebook connectée",
+			"Événements webhook de commentaire",
+			"Autorisation de réponse privée / messagerie"
+		]
+	},
+	"pricing": {
+		"title": "Un tarif simple pour la première règle",
+		"body": "Commencez avec une automatisation, validez le workflow, puis passez à davantage de publications et de campagnes.",
+		"plan": "Créateur",
+		"price": "19 $",
+		"period": "/mois",
+		"features": [
+			"Mots-clés illimités",
+			"Règles pour les publications Instagram et les Reel",
+			"Aperçu des DM automatiques",
+			"Analyses de base"
+		]
+	},
+	"faq": {
+		"title": "Les premières questions des créateurs",
+		"items": [
+			[
+				"Est-ce que cela remplace mon lien en bio ?",
+				"Non. Cela envoie le lien exact en privé lorsqu’une personne le demande en commentaire."
+			],
+			[
+				"Puis-je l’utiliser avant l’approbation de Meta ?",
+				"Vous pouvez tester localement avec des rôles d’application et des comptes testeurs avant l’accès public."
+			],
+			[
+				"Que doivent dire les légendes ?",
+				"Utilisez un CTA clair, par exemple : Commentez « tenue » et consultez votre boîte de réception."
+			]
+		]
+	},
+	"cta": {
+		"title": "Prêt à transformer les commentaires en clients ?",
+		"body": "Créez votre première règle de DM automatique et commencez à envoyer le bon lien dès qu’une personne le demande."
+	},
+	"footer": {
+		"theme": "Thème",
+		"system": "Système",
+		"light": "Clair",
+		"dark": "Sombre",
+		"tagline": "Automatisation des commentaires vers DM pour le commerce des créateurs."
+	}
+}

@@ -1,0 +1,46 @@
+{
+	"name": "commentvia",
+	"private": true,
+	"type": "module",
+	"workspaces": [
+		"apps/*"
+	],
+	"scripts": {
+		"dev": "bun --filter '@commentvia/spa' dev",
+		"dev:website": "bun --filter '@commentvia/website' dev",
+		"dev:spa": "bun --filter '@commentvia/spa' dev",
+		"dev:api": "bun --filter '@commentvia/api' dev",
+		"local-up": "bun scripts/local-up.ts",
+		"local-down": "bun scripts/local-down.ts",
+		"i18n:extract": "i18next-cli extract && i18next-cli --config apps/website/i18next.config.ts extract",
+		"i18n:prepare": "bun run i18n:extract && bun run i18n:sync && bun run i18n:types && bun run format",
+		"i18n:sync": "i18next-cli sync && i18next-cli --config apps/website/i18next.config.ts sync",
+		"i18n:status": "i18next-cli status && i18next-cli --config apps/website/i18next.config.ts status",
+		"i18n:types": "i18next-cli types && i18next-cli --config apps/website/i18next.config.ts types",
+		"release:plan": "bunx --bun changeset status --since=origin/main",
+		"release:version": "bunx --bun changeset version",
+		"start": "bun --filter '*' start",
+		"build": "bun --filter '*' build",
+		"build:api": "bun --filter '@commentvia/api' build",
+		"build:app": "bun --filter '@commentvia/spa' build",
+		"build:website": "bun --filter '@commentvia/website' build",
+		"docker:api:prepare": "bun scripts/prepare-docker-image.ts",
+		"typecheck": "tsc -b",
+		"typecheck:api": "bun --filter '@commentvia/api' typecheck",
+		"typecheck:frontends": "bun --filter '@commentvia/website' typecheck && bun --filter '@commentvia/spa' typecheck",
+		"check": "bun --bun biome check .",
+		"format": "bun --bun biome check --write ."
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.5.1",
+		"@changesets/cli": "^2.31.0",
+		"@tsconfig/bun": "^1.0.10",
+		"@types/bun": "^1.3.14",
+		"@types/node": "^26.0.1",
+		"i18next-cli": "^1.64.2",
+		"typescript": "^6.0.3"
+	},
+	"patchedDependencies": {
+		"@react-router/dev@8.0.1": "patches/@react-router%2Fdev@8.0.1.patch"
+	}
+}

@@ -1,0 +1,141 @@
+{
+	"account": {
+		"settings": "Cài đặt",
+		"signIn": "Đăng nhập",
+		"signOut": "Đăng xuất"
+	},
+	"analytics": {
+		"body": "Tuyến analytics đã sẵn sàng cho phân bổ chuyên sâu hơn khi các sự kiện Meta thực và sự kiện nhấp được kết nối.",
+		"title": "Phân tích"
+	},
+	"auth": {
+		"body": "Đăng nhập để quản lý quy tắc từ khóa, kết nối liên kết sản phẩm và xem bình luận nào chuyển thành lượt nhấp.",
+		"title": "Đưa các phản hồi Instagram của bạn vào một không gian làm việc gọn gàng."
+	},
+	"authUi": {
+		"ALREADY_HAVE_AN_ACCOUNT": "Bạn đã có tài khoản?",
+		"DONT_HAVE_AN_ACCOUNT": "Bạn chưa có tài khoản?",
+		"EMAIL": "Email",
+		"EMAIL_INSTRUCTIONS": "Vui lòng nhập địa chỉ email hợp lệ.",
+		"EMAIL_PLACEHOLDER": "m@example.com",
+		"EMAIL_REQUIRED": "Bắt buộc phải có địa chỉ email",
+		"FORGOT_PASSWORD": "Quên mật khẩu",
+		"FORGOT_PASSWORD_ACTION": "Gửi liên kết đặt lại",
+		"FORGOT_PASSWORD_DESCRIPTION": "Nhập email của bạn để đặt lại mật khẩu",
+		"FORGOT_PASSWORD_EMAIL": "Kiểm tra email của bạn để nhận liên kết đặt lại mật khẩu.",
+		"FORGOT_PASSWORD_LINK": "Bạn quên mật khẩu?",
+		"NAME": "Tên",
+		"NAME_PLACEHOLDER": "Tên",
+		"OR_CONTINUE_WITH": "Hoặc tiếp tục với",
+		"PASSWORD": "Mật khẩu",
+		"PASSWORD_PLACEHOLDER": "Mật khẩu",
+		"PASSWORD_REQUIRED": "Bắt buộc phải có mật khẩu",
+		"REMEMBER_ME": "Ghi nhớ tôi",
+		"REQUEST_FAILED": "Yêu cầu không thành công",
+		"RESET_PASSWORD": "Đặt lại mật khẩu",
+		"RESET_PASSWORD_ACTION": "Lưu mật khẩu mới",
+		"RESET_PASSWORD_DESCRIPTION": "Nhập mật khẩu mới của bạn bên dưới",
+		"SIGN_IN": "Đăng nhập",
+		"SIGN_IN_ACTION": "Đăng nhập",
+		"SIGN_IN_DESCRIPTION": "Nhập email của bạn bên dưới để đăng nhập vào tài khoản",
+		"SIGN_IN_WITH": "Tiếp tục với",
+		"SIGN_OUT": "Đăng xuất",
+		"SIGN_UP": "Đăng ký",
+		"SIGN_UP_ACTION": "Tạo tài khoản",
+		"SIGN_UP_DESCRIPTION": "Nhập thông tin của bạn để tạo tài khoản"
+	},
+	"common": {
+		"appName": "CommentVia",
+		"language": "Ngôn ngữ"
+	},
+	"dashboard": {
+		"activity": {
+			"clicks": "Lượt nhấp",
+			"comments": "Bình luận",
+			"description": "Lượng bình luận hằng ngày, lượt gửi DM và lượt nhấp tiếp theo.",
+			"dms": "DM",
+			"title": "Luồng từ bình luận đến DM"
+		},
+		"badge": "Chế độ xem 30 ngày",
+		"dataNote": "Dữ liệu được cung cấp thông qua procedure dashboard oRPC có kiểu.",
+		"description": "Theo dõi quy tắc từ khóa, việc gửi DM và ý định nhấp từ các bình luận Instagram của bạn.",
+		"metricChangeSuffix": "so với kỳ trước",
+		"metrics": {
+			"activeRules": "Quy tắc đang hoạt động",
+			"avgClickRate": "Tỷ lệ nhấp trung bình",
+			"dmsSent": "DM đã gửi",
+			"linkClicks": "Lượt nhấp liên kết"
+		},
+		"queue": {
+			"comment": "Bình luận",
+			"description": "Trả lời công khai kèm trạng thái DM riêng tư.",
+			"title": "Phản hồi gần đây"
+		},
+		"rules": {
+			"clickRate": "Tỷ lệ nhấp",
+			"description": "Các tự động hóa hiệu quả nhất theo số DM đã gửi thành công và tỷ lệ nhấp.",
+			"keyword": "Từ khóa",
+			"rule": "Quy tắc",
+			"sent": "Đã gửi",
+			"status": "Trạng thái",
+			"title": "Quy tắc hàng đầu"
+		},
+		"title": "Trung tâm điều khiển tự động hóa phản hồi"
+	},
+	"days": {
+		"Fri": "Th 6",
+		"Mon": "Th 2",
+		"Sat": "Th 7",
+		"Sun": "CN",
+		"Thu": "Th 5",
+		"Tue": "Th 3",
+		"Wed": "Th 4"
+	},
+	"footer": "Ứng dụng CommentVia sử dụng chế độ React Router SPA, oRPC, Better Auth và Postgres.",
+	"layout": {
+		"headerSubtitle": "Bảng điều khiển tự động hóa Instagram",
+		"liveWorkspace": "Không gian làm việc trực tiếp",
+		"metaBody": "Kết nối Instagram, ánh xạ bình luận và luôn hiển thị chuỗi phản hồi.",
+		"metaTitle": "Thiết lập sẵn sàng cho Meta",
+		"mobileDescription": "Quản lý các tự động hóa từ bình luận đến DM.",
+		"newRule": "Quy tắc mới",
+		"openNavigation": "Mở điều hướng"
+	},
+	"nav": {
+		"analytics": "Phân tích",
+		"connections": "Kết nối",
+		"dashboard": "Bảng điều khiển",
+		"rules": "Quy tắc"
+	},
+	"replies": {
+		"genericInbox": "Sent it to your inbox.",
+		"outfitLink": "Check your inbox. I sent the outfit link.",
+		"paintDetails": "Check DM. I shared the paint details."
+	},
+	"ruleNames": {
+		"Hair tools carousel": "Carousel dụng cụ làm tóc",
+		"Outfit link on launch Reel": "Liên kết trang phục trên Reel ra mắt",
+		"Studio wall color post": "Bài đăng màu tường studio"
+	},
+	"rules": {
+		"description": "Từ khóa, liên kết DM và phản hồi công khai hiện đã được cấu hình.",
+		"keyword": "Từ khóa",
+		"name": "Tên",
+		"publicReply": "Trả lời công khai",
+		"status": "Trạng thái",
+		"title": "Quy tắc tự động hóa"
+	},
+	"status": {
+		"active": "đang hoạt động",
+		"delivered": "đã gửi",
+		"failed": "thất bại",
+		"needs review": "cần xem xét",
+		"paused": "đã tạm dừng",
+		"review": "xem xét"
+	},
+	"time": {
+		"13m ago": "13 phút trước",
+		"2m ago": "2 phút trước",
+		"8m ago": "8 phút trước"
+	}
+}

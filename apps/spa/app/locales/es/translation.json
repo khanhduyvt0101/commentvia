@@ -1,0 +1,141 @@
+{
+	"account": {
+		"settings": "Ajustes",
+		"signIn": "Iniciar sesión",
+		"signOut": "Cerrar sesión"
+	},
+	"analytics": {
+		"body": "La ruta de analíticas está lista para atribución más profunda cuando se conecten eventos reales de Meta y clics.",
+		"title": "Analíticas"
+	},
+	"auth": {
+		"body": "Inicia sesión para gestionar reglas, conectar enlaces de producto y ver qué comentarios generan clics.",
+		"title": "Lleva tus respuestas de Instagram a un espacio claro."
+	},
+	"authUi": {
+		"ALREADY_HAVE_AN_ACCOUNT": "¿Ya tienes cuenta?",
+		"DONT_HAVE_AN_ACCOUNT": "¿No tienes cuenta?",
+		"EMAIL": "Email",
+		"EMAIL_INSTRUCTIONS": "Please enter a valid email address.",
+		"EMAIL_PLACEHOLDER": "m@example.com",
+		"EMAIL_REQUIRED": "El email es obligatorio",
+		"FORGOT_PASSWORD": "Olvidé mi contraseña",
+		"FORGOT_PASSWORD_ACTION": "Enviar enlace",
+		"FORGOT_PASSWORD_DESCRIPTION": "Introduce tu email para restablecer la contraseña",
+		"FORGOT_PASSWORD_EMAIL": "Revisa tu email para el enlace de restablecimiento.",
+		"FORGOT_PASSWORD_LINK": "¿Olvidaste tu contraseña?",
+		"NAME": "Nombre",
+		"NAME_PLACEHOLDER": "Nombre",
+		"OR_CONTINUE_WITH": "O continúa con",
+		"PASSWORD": "Contraseña",
+		"PASSWORD_PLACEHOLDER": "Contraseña",
+		"PASSWORD_REQUIRED": "La contraseña es obligatoria",
+		"REMEMBER_ME": "Recordarme",
+		"REQUEST_FAILED": "La solicitud falló",
+		"RESET_PASSWORD": "Restablecer contraseña",
+		"RESET_PASSWORD_ACTION": "Guardar nueva contraseña",
+		"RESET_PASSWORD_DESCRIPTION": "Introduce tu nueva contraseña",
+		"SIGN_IN": "Iniciar sesión",
+		"SIGN_IN_ACTION": "Entrar",
+		"SIGN_IN_DESCRIPTION": "Introduce tu email para entrar a tu cuenta",
+		"SIGN_IN_WITH": "Continuar con",
+		"SIGN_OUT": "Cerrar sesión",
+		"SIGN_UP": "Registrarse",
+		"SIGN_UP_ACTION": "Crear cuenta",
+		"SIGN_UP_DESCRIPTION": "Introduce tus datos para crear una cuenta"
+	},
+	"common": {
+		"appName": "CommentVia",
+		"language": "Idioma"
+	},
+	"dashboard": {
+		"activity": {
+			"clicks": "Clics",
+			"comments": "Comentarios",
+			"description": "Comentarios diarios, DMs enviados y seguimiento de clics.",
+			"dms": "DMs",
+			"title": "Flujo comentario a DM"
+		},
+		"badge": "Vista 30 días",
+		"dataNote": "Los datos se sirven con el procedimiento tipado de oRPC.",
+		"description": "Sigue reglas, DMs y clics desde tus comentarios de Instagram.",
+		"metricChangeSuffix": "vs periodo anterior",
+		"metrics": {
+			"activeRules": "Reglas activas",
+			"avgClickRate": "CTR medio",
+			"dmsSent": "DMs enviados",
+			"linkClicks": "Clics en enlace"
+		},
+		"queue": {
+			"comment": "Comentario",
+			"description": "Respuesta pública y estado del DM privado.",
+			"title": "Respuestas recientes"
+		},
+		"rules": {
+			"clickRate": "CTR",
+			"description": "Automatizaciones con mejor rendimiento por DMs y CTR.",
+			"keyword": "Keyword",
+			"rule": "Regla",
+			"sent": "Enviados",
+			"status": "Estado",
+			"title": "Reglas principales"
+		},
+		"title": "Centro de control de respuestas automáticas"
+	},
+	"days": {
+		"Fri": "Vie",
+		"Mon": "Lun",
+		"Sat": "Sáb",
+		"Sun": "Dom",
+		"Thu": "Jue",
+		"Tue": "Mar",
+		"Wed": "Mié"
+	},
+	"footer": "La app CommentVia usa React Router SPA, oRPC, Better Auth y Postgres.",
+	"layout": {
+		"headerSubtitle": "Dashboard de automatización de Instagram",
+		"liveWorkspace": "Workspace en vivo",
+		"metaBody": "Conecta Instagram, mapea comentarios y mantén visible el rastro de respuestas.",
+		"metaTitle": "Listo para Meta",
+		"mobileDescription": "Gestiona automatizaciones comment-to-DM.",
+		"newRule": "Nueva regla",
+		"openNavigation": "Abrir navegación"
+	},
+	"nav": {
+		"analytics": "Analíticas",
+		"connections": "Conexiones",
+		"dashboard": "Dashboard",
+		"rules": "Reglas"
+	},
+	"replies": {
+		"genericInbox": "Sent it to your inbox.",
+		"outfitLink": "Check your inbox. I sent the outfit link.",
+		"paintDetails": "Check DM. I shared the paint details."
+	},
+	"ruleNames": {
+		"Hair tools carousel": "Carrusel de herramientas de cabello",
+		"Outfit link on launch Reel": "Enlace de outfit en Reel de lanzamiento",
+		"Studio wall color post": "Post de color de pared del estudio"
+	},
+	"rules": {
+		"description": "Keywords, enlaces DM y respuestas públicas configuradas.",
+		"keyword": "Keyword",
+		"name": "Nombre",
+		"publicReply": "Respuesta pública",
+		"status": "Estado",
+		"title": "Reglas de automatización"
+	},
+	"status": {
+		"active": "activa",
+		"delivered": "entregado",
+		"failed": "fallido",
+		"needs review": "requiere revisión",
+		"paused": "pausada",
+		"review": "revisión"
+	},
+	"time": {
+		"13m ago": "hace 13 min",
+		"2m ago": "hace 2 min",
+		"8m ago": "hace 8 min"
+	}
+}

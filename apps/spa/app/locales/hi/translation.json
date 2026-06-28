@@ -1,0 +1,141 @@
+{
+	"account": {
+		"settings": "सेटिंग्स",
+		"signIn": "साइन इन",
+		"signOut": "साइन आउट"
+	},
+	"analytics": {
+		"body": "Real Meta और click events जुड़ने के बाद यह analytics route deeper attribution के लिए तैयार है।",
+		"title": "Analytics"
+	},
+	"auth": {
+		"body": "Keyword rules manage करने, product links connect करने और clicks देखने के लिए sign in करें।",
+		"title": "Instagram replies को एक साफ workspace में लाएं।"
+	},
+	"authUi": {
+		"ALREADY_HAVE_AN_ACCOUNT": "पहले से account है?",
+		"DONT_HAVE_AN_ACCOUNT": "Account नहीं है?",
+		"EMAIL": "Email",
+		"EMAIL_INSTRUCTIONS": "Please enter a valid email address.",
+		"EMAIL_PLACEHOLDER": "m@example.com",
+		"EMAIL_REQUIRED": "Email जरूरी है",
+		"FORGOT_PASSWORD": "Password भूल गए",
+		"FORGOT_PASSWORD_ACTION": "Reset link भेजें",
+		"FORGOT_PASSWORD_DESCRIPTION": "Password reset करने के लिए email डालें",
+		"FORGOT_PASSWORD_EMAIL": "Password reset link के लिए email देखें.",
+		"FORGOT_PASSWORD_LINK": "Password भूल गए?",
+		"NAME": "नाम",
+		"NAME_PLACEHOLDER": "नाम",
+		"OR_CONTINUE_WITH": "या जारी रखें",
+		"PASSWORD": "Password",
+		"PASSWORD_PLACEHOLDER": "Password",
+		"PASSWORD_REQUIRED": "Password जरूरी है",
+		"REMEMBER_ME": "मुझे याद रखें",
+		"REQUEST_FAILED": "Request failed",
+		"RESET_PASSWORD": "Password reset करें",
+		"RESET_PASSWORD_ACTION": "New password save करें",
+		"RESET_PASSWORD_DESCRIPTION": "नीचे नया password डालें",
+		"SIGN_IN": "साइन इन",
+		"SIGN_IN_ACTION": "Login",
+		"SIGN_IN_DESCRIPTION": "Account में login करने के लिए email डालें",
+		"SIGN_IN_WITH": "इसके साथ जारी रखें",
+		"SIGN_OUT": "साइन आउट",
+		"SIGN_UP": "साइन अप",
+		"SIGN_UP_ACTION": "Account बनाएं",
+		"SIGN_UP_DESCRIPTION": "Account बनाने के लिए जानकारी डालें"
+	},
+	"common": {
+		"appName": "CommentVia",
+		"language": "भाषा"
+	},
+	"dashboard": {
+		"activity": {
+			"clicks": "Clicks",
+			"comments": "Comments",
+			"description": "Daily comments, DM sends और click follow-through.",
+			"dms": "DMs",
+			"title": "Comment to DM flow"
+		},
+		"badge": "30 दिन",
+		"dataNote": "Data typed oRPC dashboard procedure से आता है.",
+		"description": "Instagram comments से keyword rules, DM delivery और click intent track करें.",
+		"metricChangeSuffix": "previous period से",
+		"metrics": {
+			"activeRules": "Active rules",
+			"avgClickRate": "Avg click rate",
+			"dmsSent": "DMs sent",
+			"linkClicks": "Link clicks"
+		},
+		"queue": {
+			"comment": "Comment",
+			"description": "Public reply और private DM status.",
+			"title": "Recent replies"
+		},
+		"rules": {
+			"clickRate": "Click rate",
+			"description": "Delivered DMs और click rate से best automations.",
+			"keyword": "Keyword",
+			"rule": "Rule",
+			"sent": "Sent",
+			"status": "Status",
+			"title": "Top rules"
+		},
+		"title": "Reply automation command center"
+	},
+	"days": {
+		"Fri": "शुक्र",
+		"Mon": "सोम",
+		"Sat": "शनि",
+		"Sun": "रवि",
+		"Thu": "गुरु",
+		"Tue": "मंगल",
+		"Wed": "बुध"
+	},
+	"footer": "CommentVia app React Router SPA mode, oRPC, Better Auth और Postgres इस्तेमाल करता है.",
+	"layout": {
+		"headerSubtitle": "Instagram automation dashboard",
+		"liveWorkspace": "Live workspace",
+		"metaBody": "Instagram connect करें, comments map करें और reply trail साफ रखें.",
+		"metaTitle": "Meta-ready setup",
+		"mobileDescription": "Comment-to-DM automations manage करें.",
+		"newRule": "New rule",
+		"openNavigation": "Navigation खोलें"
+	},
+	"nav": {
+		"analytics": "Analytics",
+		"connections": "Connections",
+		"dashboard": "Dashboard",
+		"rules": "Rules"
+	},
+	"replies": {
+		"genericInbox": "Sent it to your inbox.",
+		"outfitLink": "Check your inbox. I sent the outfit link.",
+		"paintDetails": "Check DM. I shared the paint details."
+	},
+	"ruleNames": {
+		"Hair tools carousel": "Hair tools carousel",
+		"Outfit link on launch Reel": "Launch Reel outfit link",
+		"Studio wall color post": "Studio wall color post"
+	},
+	"rules": {
+		"description": "Configured keywords, DM links और public replies.",
+		"keyword": "Keyword",
+		"name": "Name",
+		"publicReply": "Public reply",
+		"status": "Status",
+		"title": "Automation rules"
+	},
+	"status": {
+		"active": "active",
+		"delivered": "delivered",
+		"failed": "failed",
+		"needs review": "needs review",
+		"paused": "paused",
+		"review": "review"
+	},
+	"time": {
+		"13m ago": "13m पहले",
+		"2m ago": "2m पहले",
+		"8m ago": "8m पहले"
+	}
+}

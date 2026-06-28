@@ -1,0 +1,119 @@
+{
+	"nav": {
+		"how": "Cómo funciona",
+		"useCases": "Casos de uso",
+		"pricing": "Precios",
+		"faq": "Preguntas frecuentes",
+		"signIn": "Iniciar sesión",
+		"getStarted": "Comenzar",
+		"language": "Idioma",
+		"menu": "Menú",
+		"closeMenu": "Cerrar menú"
+	},
+	"hero": {
+		"title": "Convierte comentarios de Instagram en enlaces instantáneos por DM",
+		"body": "Los espectadores comentan una palabra clave como outfit, hair o paint — CommentVia les envía al instante un DM con el enlace de tu producto.",
+		"proofs": [
+			"100% automatizado",
+			"Entrega instantánea por DM",
+			"Más guardados, clics y ventas"
+		],
+		"replyAccount": "yourusername",
+		"replyText": "Revisa tu bandeja de entrada"
+	},
+	"workflow": {
+		"title": "Lanza un flujo de comentarios a DM en minutos",
+		"body": "Las mejores herramientas para creadores acortan el camino: elige la publicación, detecta el comentario, envía el enlace correcto y observa qué convierte.",
+		"steps": [
+			[
+				"Crea una regla",
+				"Conecta la publicación o Reel que ya está captando atención."
+			],
+			[
+				"Detecta la intención",
+				"Usa palabras clave como outfit, link, recipe, size, price o paint."
+			],
+			[
+				"Responde en privado",
+				"Diles a quienes comentan que revisen su bandeja de entrada y entrégales el enlace de compra."
+			]
+		]
+	},
+	"useCases": {
+		"title": "Creado para creadores que venden a través de comentarios",
+		"items": [
+			[
+				"Lanzamientos de moda",
+				"Convierte comentarios sobre outfit, size y link en enlaces privados de productos."
+			],
+			[
+				"Tutoriales de belleza",
+				"Envía listas de productos cuando tus seguidores pidan hair, brush o shade."
+			],
+			[
+				"Productos digitales",
+				"Entrega guías, plantillas, presets o lead magnets con una sola palabra clave."
+			]
+		]
+	},
+	"analytics": {
+		"title": "Descubre qué comentarios se convierten en clics",
+		"body": "Haz seguimiento de reglas activas, palabras clave detectadas, DM enviados y clics en enlaces para que cada caption sea más inteligente.",
+		"stats": [
+			["1,234", "Comentarios coincidentes"],
+			["892", "DM enviados"],
+			["38%", "Tasa de clics"]
+		]
+	},
+	"trust": {
+		"title": "Diseñado en torno al flujo oficial de Meta",
+		"body": "Usa cuentas de prueba mientras construyes. Para un SaaS público, solicita Meta App Review y Advanced Access para permisos de comentarios y mensajería de Instagram.",
+		"items": [
+			"Cuenta de creador o empresa",
+			"Página de Facebook conectada",
+			"Eventos de webhook de comentarios",
+			"Permiso de respuesta privada / mensajería"
+		]
+	},
+	"pricing": {
+		"title": "Precios simples para la primera regla",
+		"body": "Empieza con una automatización, valida el flujo de trabajo y luego escala a más publicaciones y campañas.",
+		"plan": "Creador",
+		"price": "$19",
+		"period": "/mes",
+		"features": [
+			"Palabras clave ilimitadas",
+			"Reglas para publicaciones de Instagram y Reel",
+			"Vista previa de DM automático",
+			"Analíticas básicas"
+		]
+	},
+	"faq": {
+		"title": "Preguntas que los creadores hacen primero",
+		"items": [
+			[
+				"¿Esto reemplaza mi enlace en la bio?",
+				"No. Envía el enlace exacto de forma privada cuando alguien lo pide en los comentarios."
+			],
+			[
+				"¿Puedo usarlo antes de la aprobación de Meta?",
+				"Puedes probarlo localmente con roles de la app y cuentas de prueba antes del acceso público."
+			],
+			[
+				"¿Qué deberían decir los pies de foto?",
+				"Usa un CTA claro como: Comenta outfit y revisa tu bandeja de entrada."
+			]
+		]
+	},
+	"cta": {
+		"title": "¿Listo para convertir comentarios en clientes?",
+		"body": "Crea tu primera regla de DM automático y empieza a enviar el enlace correcto en el momento en que alguien lo pida."
+	},
+	"footer": {
+		"theme": "Tema",
+		"system": "Sistema",
+		"light": "Claro",
+		"dark": "Oscuro",
+		"tagline": "Automatización de comentarios a DM para el comercio de creadores."
+	}
+}

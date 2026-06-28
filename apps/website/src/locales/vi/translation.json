@@ -1,0 +1,116 @@
+{
+	"nav": {
+		"how": "Cách hoạt động",
+		"useCases": "Trường hợp sử dụng",
+		"pricing": "Bảng giá",
+		"faq": "Câu hỏi thường gặp",
+		"signIn": "Đăng nhập",
+		"getStarted": "Bắt đầu",
+		"language": "Ngôn ngữ",
+		"menu": "Menu",
+		"closeMenu": "Đóng menu"
+	},
+	"hero": {
+		"title": "Biến bình luận Instagram thành liên kết DM tức thì",
+		"body": "Người xem bình luận một từ khóa như outfit, hair hoặc paint — CommentVia sẽ gửi ngay cho họ một DM kèm liên kết sản phẩm của bạn.",
+		"proofs": [
+			"Tự động 100%",
+			"Gửi DM tức thì",
+			"Nhiều lượt lưu, nhấp chuột & doanh số hơn"
+		],
+		"replyAccount": "yourusername",
+		"replyText": "Kiểm tra hộp thư của bạn"
+	},
+	"workflow": {
+		"title": "Thiết lập luồng từ bình luận đến DM trong vài phút",
+		"body": "Những công cụ tốt nhất cho nhà sáng tạo luôn rút ngắn hành trình: chọn bài đăng, khớp bình luận, gửi đúng liên kết, rồi theo dõi nội dung nào chuyển đổi.",
+		"steps": [
+			["Tạo một quy tắc", "Kết nối bài đăng hoặc Reel đang thu hút sự chú ý."],
+			[
+				"Khớp ý định",
+				"Dùng các từ khóa như outfit, link, recipe, size, price hoặc paint."
+			],
+			[
+				"Trả lời riêng tư",
+				"Nhắc người bình luận kiểm tra hộp thư và gửi liên kết mua sắm."
+			]
+		]
+	},
+	"useCases": {
+		"title": "Dành cho nhà sáng tạo bán hàng qua bình luận",
+		"items": [
+			[
+				"Ra mắt sản phẩm thời trang",
+				"Biến các bình luận về outfit, size và link thành liên kết sản phẩm riêng tư."
+			],
+			[
+				"Hướng dẫn làm đẹp",
+				"Gửi danh sách sản phẩm khi người theo dõi hỏi về hair, brush hoặc shade."
+			],
+			[
+				"Sản phẩm số",
+				"Gửi hướng dẫn, mẫu, preset hoặc lead magnet chỉ từ một từ khóa."
+			]
+		]
+	},
+	"analytics": {
+		"title": "Biết bình luận nào chuyển thành lượt nhấp",
+		"body": "Theo dõi quy tắc đang hoạt động, từ khóa đã khớp, DM đã gửi và lượt nhấp liên kết để mỗi caption ngày càng hiệu quả hơn.",
+		"stats": [
+			["1,234", "Bình luận đã khớp"],
+			["892", "DM đã gửi"],
+			["38%", "Tỷ lệ nhấp"]
+		]
+	},
+	"trust": {
+		"title": "Được thiết kế theo quy trình chính thức của Meta",
+		"body": "Sử dụng tài khoản thử nghiệm trong khi xây dựng. Với SaaS công khai, hãy yêu cầu Meta App Review và Advanced Access cho quyền truy cập bình luận và nhắn tin trên Instagram.",
+		"items": [
+			"Tài khoản Creator hoặc Business",
+			"Facebook Page đã kết nối",
+			"Sự kiện webhook bình luận",
+			"Quyền trả lời riêng tư / nhắn tin"
+		]
+	},
+	"pricing": {
+		"title": "Bảng giá đơn giản cho quy tắc đầu tiên",
+		"body": "Bắt đầu với một tự động hóa, chứng minh hiệu quả quy trình, rồi mở rộng sang nhiều bài đăng và chiến dịch hơn.",
+		"plan": "Creator",
+		"price": "$19",
+		"period": "/tháng",
+		"features": [
+			"Không giới hạn từ khóa",
+			"Quy tắc cho bài đăng Instagram và Reel",
+			"Xem trước DM tự động",
+			"Phân tích cơ bản"
+		]
+	},
+	"faq": {
+		"title": "Những câu hỏi creator thường hỏi trước tiên",
+		"items": [
+			[
+				"Công cụ này có thay thế link trong bio của tôi không?",
+				"Không. Công cụ sẽ gửi riêng đúng link đó khi có người hỏi trong bình luận."
+			],
+			[
+				"Tôi có thể dùng trước khi được Meta phê duyệt không?",
+				"Bạn có thể thử nghiệm cục bộ bằng vai trò ứng dụng và tài khoản tester trước khi mở truy cập công khai."
+			],
+			[
+				"Caption nên viết gì?",
+				"Dùng CTA rõ ràng như: Bình luận “trang phục” và kiểm tra hộp thư của bạn."
+			]
+		]
+	},
+	"cta": {
+		"title": "Sẵn sàng biến bình luận thành khách hàng?",
+		"body": "Tạo quy tắc DM tự động đầu tiên và bắt đầu gửi đúng link ngay khi có người hỏi."
+	},
+	"footer": {
+		"theme": "Giao diện",
+		"system": "Hệ thống",
+		"light": "Sáng",
+		"dark": "Tối",
+		"tagline": "Tự động hóa từ bình luận đến DM cho thương mại của creator."
+	}
+}

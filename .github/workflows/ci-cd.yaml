@@ -1,0 +1,62 @@
+name: CI/CD
+
+on:
+  workflow_dispatch:
+  push:
+    tags: ["v*"]
+
+concurrency:
+  group: ${{ github.workflow }}
+
+jobs:
+  api:
+    if: github.event_name == 'workflow_dispatch' || startsWith(github.ref, 'refs/tags/v')
+    uses: ./.github/workflows/publish-dokploy-app.yaml
+    secrets: inherit
+    permissions:
+      contents: read
+      packages: write
+    with:
+      project: commentvia-api
+      dokploy-app-id: ${{ vars.COMMENTVIA_API_DOKPLOY_APP_ID }}
+
+  website:
+    if: github.event_name == 'workflow_dispatch' || startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: ./.github/actions/prepare
+      - name: Build website
+        run: bun run build:website
+      - name: Deploy website
+        env:
+          VERCEL_ORG_ID: ${{ vars.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ vars.COMMENTVIA_WEBSITE_VERCEL_PROJECT_ID }}
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          mkdir -p /tmp/commentvia-website/.vercel
+          rsync -a --delete apps/website/dist/ /tmp/commentvia-website/
+          printf '{"orgId":"%s","projectId":"%s"}\n' "$VERCEL_ORG_ID" "$VERCEL_PROJECT_ID" > /tmp/commentvia-website/.vercel/project.json
+          cd /tmp/commentvia-website
+          bunx --bun vercel@latest deploy --prod --yes --token "$VERCEL_TOKEN"
+
+  app:
+    if: github.event_name == 'workflow_dispatch' || startsWith(github.ref, 'refs/tags/v')
+    needs: [api]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: ./.github/actions/prepare
+      - name: Build app
+        run: bun run build:app
+      - name: Deploy app
+        env:
+          VERCEL_ORG_ID: ${{ vars.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ vars.COMMENTVIA_APP_VERCEL_PROJECT_ID }}
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          mkdir -p /tmp/commentvia-app/.vercel
+          rsync -a --delete apps/spa/build/client/ /tmp/commentvia-app/
+          printf '{"orgId":"%s","projectId":"%s"}\n' "$VERCEL_ORG_ID" "$VERCEL_PROJECT_ID" > /tmp/commentvia-app/.vercel/project.json
+          cd /tmp/commentvia-app
+          bunx --bun vercel@latest deploy --prod --yes --token "$VERCEL_TOKEN"

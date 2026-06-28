@@ -1,0 +1,141 @@
+{
+	"account": {
+		"settings": "设置",
+		"signIn": "登录",
+		"signOut": "退出登录"
+	},
+	"analytics": {
+		"body": "当真实 Meta 和点击事件接入后，分析页面即可用于更深入归因。",
+		"title": "分析"
+	},
+	"auth": {
+		"body": "登录后管理关键词规则、连接产品链接，并查看哪些评论带来点击。",
+		"title": "把 Instagram 回复集中到一个清爽工作台。"
+	},
+	"authUi": {
+		"ALREADY_HAVE_AN_ACCOUNT": "已有账号？",
+		"DONT_HAVE_AN_ACCOUNT": "还没有账号？",
+		"EMAIL": "Email",
+		"EMAIL_INSTRUCTIONS": "Please enter a valid email address.",
+		"EMAIL_PLACEHOLDER": "m@example.com",
+		"EMAIL_REQUIRED": "邮箱为必填项",
+		"FORGOT_PASSWORD": "忘记密码",
+		"FORGOT_PASSWORD_ACTION": "发送重置链接",
+		"FORGOT_PASSWORD_DESCRIPTION": "输入邮箱以重置密码",
+		"FORGOT_PASSWORD_EMAIL": "请查看邮箱中的密码重置链接。",
+		"FORGOT_PASSWORD_LINK": "忘记密码？",
+		"NAME": "姓名",
+		"NAME_PLACEHOLDER": "姓名",
+		"OR_CONTINUE_WITH": "或继续使用",
+		"PASSWORD": "密码",
+		"PASSWORD_PLACEHOLDER": "密码",
+		"PASSWORD_REQUIRED": "密码为必填项",
+		"REMEMBER_ME": "记住我",
+		"REQUEST_FAILED": "请求失败",
+		"RESET_PASSWORD": "重置密码",
+		"RESET_PASSWORD_ACTION": "保存新密码",
+		"RESET_PASSWORD_DESCRIPTION": "在下方输入新密码",
+		"SIGN_IN": "登录",
+		"SIGN_IN_ACTION": "登录",
+		"SIGN_IN_DESCRIPTION": "输入邮箱登录账号",
+		"SIGN_IN_WITH": "继续使用",
+		"SIGN_OUT": "退出登录",
+		"SIGN_UP": "注册",
+		"SIGN_UP_ACTION": "创建账号",
+		"SIGN_UP_DESCRIPTION": "输入信息创建账号"
+	},
+	"common": {
+		"appName": "CommentVia",
+		"language": "语言"
+	},
+	"dashboard": {
+		"activity": {
+			"clicks": "点击",
+			"comments": "评论",
+			"description": "每日评论量、DM 发送和点击跟进。",
+			"dms": "DM",
+			"title": "评论到 DM 流程"
+		},
+		"badge": "30 天视图",
+		"dataNote": "数据通过类型化 oRPC dashboard procedure 提供。",
+		"description": "跟踪 Instagram 评论中的关键词规则、DM 投递和点击意图。",
+		"metricChangeSuffix": "较上一周期",
+		"metrics": {
+			"activeRules": "启用规则",
+			"avgClickRate": "平均点击率",
+			"dmsSent": "已发送 DM",
+			"linkClicks": "链接点击"
+		},
+		"queue": {
+			"comment": "评论",
+			"description": "公开回复和私信状态。",
+			"title": "最近回复"
+		},
+		"rules": {
+			"clickRate": "点击率",
+			"description": "按 DM 投递和点击率排序的最佳自动化。",
+			"keyword": "关键词",
+			"rule": "规则",
+			"sent": "已发送",
+			"status": "状态",
+			"title": "热门规则"
+		},
+		"title": "回复自动化控制中心"
+	},
+	"days": {
+		"Fri": "周五",
+		"Mon": "周一",
+		"Sat": "周六",
+		"Sun": "周日",
+		"Thu": "周四",
+		"Tue": "周二",
+		"Wed": "周三"
+	},
+	"footer": "CommentVia 应用使用 React Router SPA mode、oRPC、Better Auth 和 Postgres。",
+	"layout": {
+		"headerSubtitle": "Instagram 自动化仪表盘",
+		"liveWorkspace": "实时工作区",
+		"metaBody": "连接 Instagram、匹配评论，并保留清晰的回复记录。",
+		"metaTitle": "Meta 就绪设置",
+		"mobileDescription": "管理 comment-to-DM 自动化。",
+		"newRule": "新规则",
+		"openNavigation": "打开导航"
+	},
+	"nav": {
+		"analytics": "分析",
+		"connections": "连接",
+		"dashboard": "仪表盘",
+		"rules": "规则"
+	},
+	"replies": {
+		"genericInbox": "Sent it to your inbox.",
+		"outfitLink": "Check your inbox. I sent the outfit link.",
+		"paintDetails": "Check DM. I shared the paint details."
+	},
+	"ruleNames": {
+		"Hair tools carousel": "美发工具轮播",
+		"Outfit link on launch Reel": "发布 Reel 的 outfit 链接",
+		"Studio wall color post": "工作室墙色帖子"
+	},
+	"rules": {
+		"description": "当前配置的关键词、DM 链接和公开回复。",
+		"keyword": "关键词",
+		"name": "名称",
+		"publicReply": "公开回复",
+		"status": "状态",
+		"title": "自动化规则"
+	},
+	"status": {
+		"active": "启用",
+		"delivered": "已送达",
+		"failed": "失败",
+		"needs review": "需要审核",
+		"paused": "暂停",
+		"review": "审核中"
+	},
+	"time": {
+		"13m ago": "13 分钟前",
+		"2m ago": "2 分钟前",
+		"8m ago": "8 分钟前"
+	}
+}

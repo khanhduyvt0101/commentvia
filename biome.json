@@ -1,0 +1,25 @@
+{
+	"files": {
+		"includes": [
+			"**",
+			"!!**/build",
+			"!!**/dist",
+			"!!**/.react-router",
+			"!!**/.tsc",
+			"!!**/*.tsbuildinfo",
+			"!!**/node_modules"
+		]
+	},
+	"css": {
+		"parser": {
+			"tailwindDirectives": true
+		}
+	},
+	"linter": {
+		"rules": {
+			"suspicious": {
+				"noArrayIndexKey": "off"
+			}
+		}
+	}
+}

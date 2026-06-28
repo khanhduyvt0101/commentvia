@@ -1,0 +1,141 @@
+{
+	"account": {
+		"settings": "Einstellungen",
+		"signIn": "Anmelden",
+		"signOut": "Abmelden"
+	},
+	"analytics": {
+		"body": "Die Analytics-Route ist bereit für tiefere Attribution, sobald echte Meta- und Klick-Events verbunden sind.",
+		"title": "Analytics"
+	},
+	"auth": {
+		"body": "Melde dich an, um Keyword-Regeln zu verwalten, Produktlinks zu verbinden und Klick-Kommentare zu sehen.",
+		"title": "Bringe deine Instagram-Antworten in einen klaren Workspace."
+	},
+	"authUi": {
+		"ALREADY_HAVE_AN_ACCOUNT": "Schon ein Konto?",
+		"DONT_HAVE_AN_ACCOUNT": "Noch kein Konto?",
+		"EMAIL": "Email",
+		"EMAIL_INSTRUCTIONS": "Please enter a valid email address.",
+		"EMAIL_PLACEHOLDER": "m@example.com",
+		"EMAIL_REQUIRED": "E-Mail ist erforderlich",
+		"FORGOT_PASSWORD": "Passwort vergessen",
+		"FORGOT_PASSWORD_ACTION": "Reset-Link senden",
+		"FORGOT_PASSWORD_DESCRIPTION": "Gib deine E-Mail ein, um das Passwort zurückzusetzen",
+		"FORGOT_PASSWORD_EMAIL": "Prüfe deine E-Mail für den Reset-Link.",
+		"FORGOT_PASSWORD_LINK": "Passwort vergessen?",
+		"NAME": "Name",
+		"NAME_PLACEHOLDER": "Name",
+		"OR_CONTINUE_WITH": "Oder weiter mit",
+		"PASSWORD": "Passwort",
+		"PASSWORD_PLACEHOLDER": "Passwort",
+		"PASSWORD_REQUIRED": "Passwort ist erforderlich",
+		"REMEMBER_ME": "Angemeldet bleiben",
+		"REQUEST_FAILED": "Anfrage fehlgeschlagen",
+		"RESET_PASSWORD": "Passwort zurücksetzen",
+		"RESET_PASSWORD_ACTION": "Neues Passwort speichern",
+		"RESET_PASSWORD_DESCRIPTION": "Gib unten dein neues Passwort ein",
+		"SIGN_IN": "Anmelden",
+		"SIGN_IN_ACTION": "Einloggen",
+		"SIGN_IN_DESCRIPTION": "Gib deine E-Mail ein, um dich anzumelden",
+		"SIGN_IN_WITH": "Weiter mit",
+		"SIGN_OUT": "Abmelden",
+		"SIGN_UP": "Registrieren",
+		"SIGN_UP_ACTION": "Konto erstellen",
+		"SIGN_UP_DESCRIPTION": "Gib deine Daten ein, um ein Konto zu erstellen"
+	},
+	"common": {
+		"appName": "CommentVia",
+		"language": "Sprache"
+	},
+	"dashboard": {
+		"activity": {
+			"clicks": "Klicks",
+			"comments": "Kommentare",
+			"description": "Tägliche Kommentare, DMs und Klick-Follow-through.",
+			"dms": "DMs",
+			"title": "Kommentar-zu-DM Flow"
+		},
+		"badge": "30-Tage-Ansicht",
+		"dataNote": "Daten kommen aus der typisierten oRPC Dashboard Procedure.",
+		"description": "Verfolge Keyword-Regeln, DM-Zustellung und Klickabsicht aus Instagram-Kommentaren.",
+		"metricChangeSuffix": "vs vorheriger Zeitraum",
+		"metrics": {
+			"activeRules": "Aktive Regeln",
+			"avgClickRate": "Ø Klickrate",
+			"dmsSent": "DMs gesendet",
+			"linkClicks": "Link-Klicks"
+		},
+		"queue": {
+			"comment": "Kommentar",
+			"description": "Öffentliche Antwort plus privater DM-Status.",
+			"title": "Aktuelle Antworten"
+		},
+		"rules": {
+			"clickRate": "Klickrate",
+			"description": "Beste Automationen nach gesendeten DMs und Klickrate.",
+			"keyword": "Keyword",
+			"rule": "Regel",
+			"sent": "Gesendet",
+			"status": "Status",
+			"title": "Top-Regeln"
+		},
+		"title": "Kontrollzentrum für Antwort-Automation"
+	},
+	"days": {
+		"Fri": "Fr",
+		"Mon": "Mo",
+		"Sat": "Sa",
+		"Sun": "So",
+		"Thu": "Do",
+		"Tue": "Di",
+		"Wed": "Mi"
+	},
+	"footer": "Die CommentVia App nutzt React Router SPA Mode, oRPC, Better Auth und Postgres.",
+	"layout": {
+		"headerSubtitle": "Instagram Automation Dashboard",
+		"liveWorkspace": "Live Workspace",
+		"metaBody": "Verbinde Instagram, mappe Kommentare und halte den Antwortverlauf sichtbar.",
+		"metaTitle": "Meta-ready Setup",
+		"mobileDescription": "Comment-to-DM Automationen verwalten.",
+		"newRule": "Neue Regel",
+		"openNavigation": "Navigation öffnen"
+	},
+	"nav": {
+		"analytics": "Analytics",
+		"connections": "Verbindungen",
+		"dashboard": "Dashboard",
+		"rules": "Regeln"
+	},
+	"replies": {
+		"genericInbox": "Sent it to your inbox.",
+		"outfitLink": "Check your inbox. I sent the outfit link.",
+		"paintDetails": "Check DM. I shared the paint details."
+	},
+	"ruleNames": {
+		"Hair tools carousel": "Hair-Tools Karussell",
+		"Outfit link on launch Reel": "Outfit-Link im Launch Reel",
+		"Studio wall color post": "Studio-Wandfarbe Post"
+	},
+	"rules": {
+		"description": "Aktuell konfigurierte Keywords, DM-Links und öffentliche Antworten.",
+		"keyword": "Keyword",
+		"name": "Name",
+		"publicReply": "Öffentliche Antwort",
+		"status": "Status",
+		"title": "Automation-Regeln"
+	},
+	"status": {
+		"active": "aktiv",
+		"delivered": "zugestellt",
+		"failed": "fehlgeschlagen",
+		"needs review": "prüfen",
+		"paused": "pausiert",
+		"review": "Review"
+	},
+	"time": {
+		"13m ago": "vor 13 Min.",
+		"2m ago": "vor 2 Min.",
+		"8m ago": "vor 8 Min."
+	}
+}

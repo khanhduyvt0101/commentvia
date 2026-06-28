@@ -1,0 +1,49 @@
+name: Release
+run-name: "${{ github.event_name == 'pull_request' && format('Release PR #{0}', github.event.pull_request.number) || 'Release Manual' }}"
+
+on:
+  workflow_dispatch:
+  pull_request:
+    types: [closed]
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
+jobs:
+  release:
+    if: (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main') || (github.event.pull_request.merged == true && contains(github.event.pull_request.labels.*.name, 'release'))
+    name: Release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: read
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+      - uses: ./.github/actions/prepare
+      - name: Version packages
+        run: bun --bun changeset version
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Format changed files
+        run: bun --bun biome check --write --no-errors-on-unmatched .
+      - id: version
+        name: Read release version
+        run: echo "version=$(jq -r .version apps/api/package.json)" >> "$GITHUB_OUTPUT"
+      - name: Commit release
+        run: |
+          git add -A
+          git commit -m "Publish v${{ steps.version.outputs.version }}"
+          git tag "v${{ steps.version.outputs.version }}"
+          git push
+          git push origin "v${{ steps.version.outputs.version }}"
+      - name: Create GitHub release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          NOTES=$(awk "/^## ${VERSION}/{found=1; next} /^## [0-9]/{if(found) exit} found" apps/api/CHANGELOG.md)
+          gh release create "v${VERSION}" --title "v${VERSION}" --notes "${NOTES:-CommentVia v${VERSION}}"

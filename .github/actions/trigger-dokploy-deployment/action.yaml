@@ -1,0 +1,32 @@
+name: Trigger Dokploy deployment
+description: Trigger a Dokploy application deployment through the Dokploy API.
+
+inputs:
+  api-key:
+    description: Dokploy API key.
+    required: true
+  app-id:
+    description: Dokploy application ID.
+    required: true
+  endpoint:
+    description: Dokploy API endpoint.
+    required: false
+    default: https://app.dokploy.com/api/application.deploy
+
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      run: |
+        HTTP_CODE=$(curl -X POST \
+          '${{ inputs.endpoint }}' \
+          -H 'accept: application/json' \
+          -H 'content-type: application/json' \
+          -H 'x-api-key: ${{ inputs.api-key }}' \
+          -d '{"applicationId":"${{ inputs.app-id }}"}' \
+          -s -w "%{http_code}" -o /dev/null)
+
+        if [ "$HTTP_CODE" != "200" ]; then
+          echo "Failed to trigger Dokploy deployment ($HTTP_CODE)"
+          exit 1
+        fi

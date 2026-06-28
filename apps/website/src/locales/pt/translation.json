@@ -1,0 +1,119 @@
+{
+	"nav": {
+		"how": "Como funciona",
+		"useCases": "Casos de uso",
+		"pricing": "Preços",
+		"faq": "FAQ",
+		"signIn": "Entrar",
+		"getStarted": "Começar",
+		"language": "Idioma",
+		"menu": "Menu",
+		"closeMenu": "Fechar menu"
+	},
+	"hero": {
+		"title": "Transforme comentários do Instagram em links instantâneos por DM",
+		"body": "Os espectadores comentam uma palavra-chave como outfit, hair ou paint — o CommentVia envia imediatamente uma DM com o link do seu produto.",
+		"proofs": [
+			"100% automatizado",
+			"Envio instantâneo por DM",
+			"Mais salvamentos, cliques e vendas"
+		],
+		"replyAccount": "yourusername",
+		"replyText": "Confira sua caixa de entrada"
+	},
+	"workflow": {
+		"title": "Crie um fluxo de comentário para DM em minutos",
+		"body": "As melhores ferramentas para criadores encurtam o caminho: escolha a publicação, identifique o comentário, envie o link certo e veja o que converte.",
+		"steps": [
+			[
+				"Crie uma regra",
+				"Conecte a publicação ou Reel que já está chamando atenção."
+			],
+			[
+				"Identifique a intenção",
+				"Use palavras-chave como outfit, link, recipe, size, price ou paint."
+			],
+			[
+				"Responda em particular",
+				"Diga aos comentaristas para conferirem a caixa de entrada e envie o link de compra."
+			]
+		]
+	},
+	"useCases": {
+		"title": "Criado para creators que vendem por comentários",
+		"items": [
+			[
+				"Lançamentos de moda",
+				"Transforme comentários sobre outfit, size e link em links privados de produtos."
+			],
+			[
+				"Tutoriais de beleza",
+				"Envie listas de produtos quando seguidores pedirem hair, brush ou shade."
+			],
+			[
+				"Produtos digitais",
+				"Entregue guias, modelos, presets ou iscas digitais a partir de uma única palavra-chave."
+			]
+		]
+	},
+	"analytics": {
+		"title": "Saiba quais comentários viram cliques",
+		"body": "Acompanhe regras ativas, palavras-chave correspondidas, DMs enviadas e cliques em links para tornar cada legenda mais inteligente.",
+		"stats": [
+			["1,234", "Comentários correspondidos"],
+			["892", "DMs enviadas"],
+			["38%", "Taxa de cliques"]
+		]
+	},
+	"trust": {
+		"title": "Desenvolvido com base no caminho oficial da Meta",
+		"body": "Use contas de teste durante o desenvolvimento. Para um SaaS público, solicite a Análise do App da Meta e o Acesso Avançado para permissões de comentários e mensagens do Instagram.",
+		"items": [
+			"Conta de Creator ou Business",
+			"Página do Facebook conectada",
+			"Eventos de webhook de comentários",
+			"Permissão de resposta privada / mensagens"
+		]
+	},
+	"pricing": {
+		"title": "Preço simples para a primeira regra",
+		"body": "Comece com uma automação, valide o fluxo de trabalho e depois escale para mais publicações e campanhas.",
+		"plan": "Creator",
+		"price": "$19",
+		"period": "/mês",
+		"features": [
+			"Palavras-chave ilimitadas",
+			"Regras para posts e Reel do Instagram",
+			"Prévia de DM automática",
+			"Análises básicas"
+		]
+	},
+	"faq": {
+		"title": "Perguntas que criadores fazem primeiro",
+		"items": [
+			[
+				"Isso substitui meu link na bio?",
+				"Não. Ele envia o link exato em privado quando alguém pede nos comentários."
+			],
+			[
+				"Posso usar antes da aprovação da Meta?",
+				"Você pode testar localmente com funções do app e contas de teste antes do acesso público."
+			],
+			[
+				"O que as legendas devem dizer?",
+				"Use um CTA claro, como: Comente outfit e confira sua caixa de entrada."
+			]
+		]
+	},
+	"cta": {
+		"title": "Pronto para transformar comentários em clientes?",
+		"body": "Crie sua primeira regra de DM automática e comece a enviar o link certo no momento em que alguém pedir."
+	},
+	"footer": {
+		"theme": "Tema",
+		"system": "Sistema",
+		"light": "Claro",
+		"dark": "Escuro",
+		"tagline": "Automação de comentários para DM para comércio de criadores."
+	}
+}

@@ -1,0 +1,141 @@
+{
+	"account": {
+		"settings": "設定",
+		"signIn": "サインイン",
+		"signOut": "サインアウト"
+	},
+	"analytics": {
+		"body": "実際の Meta とクリックイベントが接続されると、より深いアトリビューションに使えます。",
+		"title": "分析"
+	},
+	"auth": {
+		"body": "サインインしてキーワードルール、商品リンク、クリックにつながるコメントを管理します。",
+		"title": "Instagram の返信をすっきりしたワークスペースへ。"
+	},
+	"authUi": {
+		"ALREADY_HAVE_AN_ACCOUNT": "すでにアカウントがありますか？",
+		"DONT_HAVE_AN_ACCOUNT": "アカウントがありませんか？",
+		"EMAIL": "Email",
+		"EMAIL_INSTRUCTIONS": "Please enter a valid email address.",
+		"EMAIL_PLACEHOLDER": "m@example.com",
+		"EMAIL_REQUIRED": "メールアドレスは必須です",
+		"FORGOT_PASSWORD": "パスワードを忘れた",
+		"FORGOT_PASSWORD_ACTION": "リセットリンクを送信",
+		"FORGOT_PASSWORD_DESCRIPTION": "パスワードをリセットするメールを入力",
+		"FORGOT_PASSWORD_EMAIL": "パスワードリセットリンクをメールで確認してください。",
+		"FORGOT_PASSWORD_LINK": "パスワードを忘れましたか？",
+		"NAME": "名前",
+		"NAME_PLACEHOLDER": "名前",
+		"OR_CONTINUE_WITH": "または次で続行",
+		"PASSWORD": "パスワード",
+		"PASSWORD_PLACEHOLDER": "パスワード",
+		"PASSWORD_REQUIRED": "パスワードは必須です",
+		"REMEMBER_ME": "ログインを保持",
+		"REQUEST_FAILED": "リクエストに失敗しました",
+		"RESET_PASSWORD": "パスワードをリセット",
+		"RESET_PASSWORD_ACTION": "新しいパスワードを保存",
+		"RESET_PASSWORD_DESCRIPTION": "新しいパスワードを入力",
+		"SIGN_IN": "サインイン",
+		"SIGN_IN_ACTION": "ログイン",
+		"SIGN_IN_DESCRIPTION": "メールアドレスでログイン",
+		"SIGN_IN_WITH": "続行:",
+		"SIGN_OUT": "サインアウト",
+		"SIGN_UP": "登録",
+		"SIGN_UP_ACTION": "アカウント作成",
+		"SIGN_UP_DESCRIPTION": "情報を入力してアカウントを作成"
+	},
+	"common": {
+		"appName": "CommentVia",
+		"language": "言語"
+	},
+	"dashboard": {
+		"activity": {
+			"clicks": "クリック",
+			"comments": "コメント",
+			"description": "日別コメント数、DM送信、クリック推移。",
+			"dms": "DM",
+			"title": "コメントからDMへの流れ"
+		},
+		"badge": "30日表示",
+		"dataNote": "データは型付き oRPC dashboard procedure から提供されます。",
+		"description": "Instagram コメントからキーワードルール、DM配信、クリック意図を追跡します。",
+		"metricChangeSuffix": "前期間比",
+		"metrics": {
+			"activeRules": "有効ルール",
+			"avgClickRate": "平均クリック率",
+			"dmsSent": "送信DM",
+			"linkClicks": "リンククリック"
+		},
+		"queue": {
+			"comment": "コメント",
+			"description": "公開返信とプライベートDMの状態。",
+			"title": "最近の返信"
+		},
+		"rules": {
+			"clickRate": "クリック率",
+			"description": "送信DMとクリック率で見た上位オートメーション。",
+			"keyword": "キーワード",
+			"rule": "ルール",
+			"sent": "送信",
+			"status": "状態",
+			"title": "上位ルール"
+		},
+		"title": "返信オートメーション管理センター"
+	},
+	"days": {
+		"Fri": "金",
+		"Mon": "月",
+		"Sat": "土",
+		"Sun": "日",
+		"Thu": "木",
+		"Tue": "火",
+		"Wed": "水"
+	},
+	"footer": "CommentVia アプリは React Router SPA mode、oRPC、Better Auth、Postgres を使用しています。",
+	"layout": {
+		"headerSubtitle": "Instagram 自動化ダッシュボード",
+		"liveWorkspace": "ライブワークスペース",
+		"metaBody": "Instagram を接続し、コメントをマップし、返信履歴を見やすく保ちます。",
+		"metaTitle": "Meta-ready 設定",
+		"mobileDescription": "comment-to-DM 自動化を管理します。",
+		"newRule": "新規ルール",
+		"openNavigation": "ナビゲーションを開く"
+	},
+	"nav": {
+		"analytics": "分析",
+		"connections": "接続",
+		"dashboard": "ダッシュボード",
+		"rules": "ルール"
+	},
+	"replies": {
+		"genericInbox": "Sent it to your inbox.",
+		"outfitLink": "Check your inbox. I sent the outfit link.",
+		"paintDetails": "Check DM. I shared the paint details."
+	},
+	"ruleNames": {
+		"Hair tools carousel": "ヘアツールのカルーセル",
+		"Outfit link on launch Reel": "ローンチ Reel の outfit リンク",
+		"Studio wall color post": "スタジオ壁色投稿"
+	},
+	"rules": {
+		"description": "現在設定されているキーワード、DMリンク、公開返信。",
+		"keyword": "キーワード",
+		"name": "名前",
+		"publicReply": "公開返信",
+		"status": "状態",
+		"title": "自動化ルール"
+	},
+	"status": {
+		"active": "有効",
+		"delivered": "配信済み",
+		"failed": "失敗",
+		"needs review": "確認が必要",
+		"paused": "停止中",
+		"review": "レビュー"
+	},
+	"time": {
+		"13m ago": "13分前",
+		"2m ago": "2分前",
+		"8m ago": "8分前"
+	}
+}

@@ -1,0 +1,141 @@
+{
+	"account": {
+		"settings": "Paramètres",
+		"signIn": "Connexion",
+		"signOut": "Déconnexion"
+	},
+	"analytics": {
+		"body": "La page analytics est prête pour une attribution plus fine lorsque les événements Meta et clics réels seront connectés.",
+		"title": "Analytics"
+	},
+	"auth": {
+		"body": "Connectez-vous pour gérer les règles, relier les produits et voir quels commentaires génèrent des clics.",
+		"title": "Regroupez vos réponses Instagram dans un workspace clair."
+	},
+	"authUi": {
+		"ALREADY_HAVE_AN_ACCOUNT": "Vous avez déjà un compte ?",
+		"DONT_HAVE_AN_ACCOUNT": "Pas encore de compte ?",
+		"EMAIL": "Email",
+		"EMAIL_INSTRUCTIONS": "Please enter a valid email address.",
+		"EMAIL_PLACEHOLDER": "m@example.com",
+		"EMAIL_REQUIRED": "L’email est obligatoire",
+		"FORGOT_PASSWORD": "Mot de passe oublié",
+		"FORGOT_PASSWORD_ACTION": "Envoyer le lien",
+		"FORGOT_PASSWORD_DESCRIPTION": "Entrez votre email pour réinitialiser le mot de passe",
+		"FORGOT_PASSWORD_EMAIL": "Vérifiez votre email pour le lien de réinitialisation.",
+		"FORGOT_PASSWORD_LINK": "Mot de passe oublié ?",
+		"NAME": "Nom",
+		"NAME_PLACEHOLDER": "Nom",
+		"OR_CONTINUE_WITH": "Ou continuer avec",
+		"PASSWORD": "Mot de passe",
+		"PASSWORD_PLACEHOLDER": "Mot de passe",
+		"PASSWORD_REQUIRED": "Le mot de passe est obligatoire",
+		"REMEMBER_ME": "Se souvenir de moi",
+		"REQUEST_FAILED": "La requête a échoué",
+		"RESET_PASSWORD": "Réinitialiser le mot de passe",
+		"RESET_PASSWORD_ACTION": "Enregistrer le nouveau mot de passe",
+		"RESET_PASSWORD_DESCRIPTION": "Entrez votre nouveau mot de passe",
+		"SIGN_IN": "Connexion",
+		"SIGN_IN_ACTION": "Se connecter",
+		"SIGN_IN_DESCRIPTION": "Entrez votre email pour vous connecter",
+		"SIGN_IN_WITH": "Continuer avec",
+		"SIGN_OUT": "Déconnexion",
+		"SIGN_UP": "Créer un compte",
+		"SIGN_UP_ACTION": "Créer un compte",
+		"SIGN_UP_DESCRIPTION": "Entrez vos informations pour créer un compte"
+	},
+	"common": {
+		"appName": "CommentVia",
+		"language": "Langue"
+	},
+	"dashboard": {
+		"activity": {
+			"clicks": "Clics",
+			"comments": "Commentaires",
+			"description": "Volume quotidien de commentaires, DMs et clics.",
+			"dms": "DMs",
+			"title": "Flux commentaire vers DM"
+		},
+		"badge": "Vue 30 jours",
+		"dataNote": "Les données viennent de la procédure oRPC typée.",
+		"description": "Suivez règles, DMs et intention de clic depuis vos commentaires Instagram.",
+		"metricChangeSuffix": "vs période précédente",
+		"metrics": {
+			"activeRules": "Règles actives",
+			"avgClickRate": "Taux moyen",
+			"dmsSent": "DMs envoyés",
+			"linkClicks": "Clics lien"
+		},
+		"queue": {
+			"comment": "Commentaire",
+			"description": "Réponse publique et statut du DM privé.",
+			"title": "Réponses récentes"
+		},
+		"rules": {
+			"clickRate": "Taux de clic",
+			"description": "Meilleures automatisations par DMs envoyés et taux de clic.",
+			"keyword": "Mot-clé",
+			"rule": "Règle",
+			"sent": "Envoyés",
+			"status": "Statut",
+			"title": "Top règles"
+		},
+		"title": "Centre de contrôle des réponses automatiques"
+	},
+	"days": {
+		"Fri": "Ven",
+		"Mon": "Lun",
+		"Sat": "Sam",
+		"Sun": "Dim",
+		"Thu": "Jeu",
+		"Tue": "Mar",
+		"Wed": "Mer"
+	},
+	"footer": "L’app CommentVia utilise React Router SPA mode, oRPC, Better Auth et Postgres.",
+	"layout": {
+		"headerSubtitle": "Dashboard d’automatisation Instagram",
+		"liveWorkspace": "Workspace live",
+		"metaBody": "Connectez Instagram, mappez les commentaires et gardez un historique clair.",
+		"metaTitle": "Prêt pour Meta",
+		"mobileDescription": "Gérez les automatisations comment-to-DM.",
+		"newRule": "Nouvelle règle",
+		"openNavigation": "Ouvrir la navigation"
+	},
+	"nav": {
+		"analytics": "Analytics",
+		"connections": "Connexions",
+		"dashboard": "Dashboard",
+		"rules": "Règles"
+	},
+	"replies": {
+		"genericInbox": "Sent it to your inbox.",
+		"outfitLink": "Check your inbox. I sent the outfit link.",
+		"paintDetails": "Check DM. I shared the paint details."
+	},
+	"ruleNames": {
+		"Hair tools carousel": "Carrousel outils cheveux",
+		"Outfit link on launch Reel": "Lien outfit sur le Reel de lancement",
+		"Studio wall color post": "Post couleur du mur studio"
+	},
+	"rules": {
+		"description": "Mots-clés, liens DM et réponses publiques configurés.",
+		"keyword": "Mot-clé",
+		"name": "Nom",
+		"publicReply": "Réponse publique",
+		"status": "Statut",
+		"title": "Règles d’automatisation"
+	},
+	"status": {
+		"active": "active",
+		"delivered": "livré",
+		"failed": "échoué",
+		"needs review": "à vérifier",
+		"paused": "pause",
+		"review": "revue"
+	},
+	"time": {
+		"13m ago": "il y a 13 min",
+		"2m ago": "il y a 2 min",
+		"8m ago": "il y a 8 min"
+	}
+}

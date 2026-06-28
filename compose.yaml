@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    container_name: commentvia-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: commentvia
+      POSTGRES_USER: commentvia
+      POSTGRES_PASSWORD: commentvia
+    ports:
+      - "${COMMENTVIA_POSTGRES_PORT:-55432}:5432"
+    volumes:
+      - commentvia-postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U commentvia -d commentvia"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  commentvia-postgres-data:

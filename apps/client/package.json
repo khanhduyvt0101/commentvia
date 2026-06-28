@@ -1,0 +1,23 @@
+{
+	"name": "@commentvia/client",
+	"version": "0.0.0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"typecheck": "tsc",
+		"build": "tsc"
+	},
+	"exports": {
+		".": "./src/index.ts",
+		"./auth": "./src/auth.ts",
+		"./orpc": "./src/orpc.ts",
+		"./urls": "./src/urls.ts"
+	},
+	"dependencies": {
+		"@commentvia/contract": "workspace:^",
+		"@commentvia/util": "workspace:^",
+		"@orpc/client": "^1.14.6",
+		"@orpc/contract": "^1.14.6",
+		"better-auth": "^1.6.22"
+	}
+}

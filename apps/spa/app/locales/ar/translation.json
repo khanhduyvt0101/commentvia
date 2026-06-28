@@ -1,0 +1,141 @@
+{
+	"account": {
+		"settings": "الإعدادات",
+		"signIn": "تسجيل الدخول",
+		"signOut": "تسجيل الخروج"
+	},
+	"analytics": {
+		"body": "صفحة التحليلات جاهزة لإسناد أعمق عند ربط أحداث Meta والنقرات الحقيقية.",
+		"title": "التحليلات"
+	},
+	"auth": {
+		"body": "سجّل الدخول لإدارة قواعد الكلمات، ربط روابط المنتجات، ومعرفة التعليقات التي تتحول إلى نقرات.",
+		"title": "اجمع ردود Instagram في مساحة عمل نظيفة."
+	},
+	"authUi": {
+		"ALREADY_HAVE_AN_ACCOUNT": "لديك حساب بالفعل؟",
+		"DONT_HAVE_AN_ACCOUNT": "ليس لديك حساب؟",
+		"EMAIL": "Email",
+		"EMAIL_INSTRUCTIONS": "Please enter a valid email address.",
+		"EMAIL_PLACEHOLDER": "m@example.com",
+		"EMAIL_REQUIRED": "البريد الإلكتروني مطلوب",
+		"FORGOT_PASSWORD": "نسيت كلمة المرور",
+		"FORGOT_PASSWORD_ACTION": "إرسال رابط إعادة التعيين",
+		"FORGOT_PASSWORD_DESCRIPTION": "أدخل بريدك لإعادة تعيين كلمة المرور",
+		"FORGOT_PASSWORD_EMAIL": "تحقق من بريدك لرابط إعادة التعيين.",
+		"FORGOT_PASSWORD_LINK": "نسيت كلمة المرور؟",
+		"NAME": "الاسم",
+		"NAME_PLACEHOLDER": "الاسم",
+		"OR_CONTINUE_WITH": "أو تابع باستخدام",
+		"PASSWORD": "كلمة المرور",
+		"PASSWORD_PLACEHOLDER": "كلمة المرور",
+		"PASSWORD_REQUIRED": "كلمة المرور مطلوبة",
+		"REMEMBER_ME": "تذكرني",
+		"REQUEST_FAILED": "فشل الطلب",
+		"RESET_PASSWORD": "إعادة تعيين كلمة المرور",
+		"RESET_PASSWORD_ACTION": "حفظ كلمة المرور الجديدة",
+		"RESET_PASSWORD_DESCRIPTION": "أدخل كلمة المرور الجديدة أدناه",
+		"SIGN_IN": "تسجيل الدخول",
+		"SIGN_IN_ACTION": "دخول",
+		"SIGN_IN_DESCRIPTION": "أدخل بريدك لتسجيل الدخول",
+		"SIGN_IN_WITH": "متابعة باستخدام",
+		"SIGN_OUT": "تسجيل الخروج",
+		"SIGN_UP": "إنشاء حساب",
+		"SIGN_UP_ACTION": "إنشاء حساب",
+		"SIGN_UP_DESCRIPTION": "أدخل معلوماتك لإنشاء حساب"
+	},
+	"common": {
+		"appName": "CommentVia",
+		"language": "اللغة"
+	},
+	"dashboard": {
+		"activity": {
+			"clicks": "النقرات",
+			"comments": "التعليقات",
+			"description": "حجم التعليقات اليومي، رسائل DM، ومتابعة النقرات.",
+			"dms": "DM",
+			"title": "تدفق التعليق إلى DM"
+		},
+		"badge": "عرض 30 يومًا",
+		"dataNote": "تأتي البيانات عبر إجراء oRPC typed.",
+		"description": "تابع قواعد الكلمات، إرسال DM، ونية النقر من تعليقات Instagram.",
+		"metricChangeSuffix": "مقارنة بالفترة السابقة",
+		"metrics": {
+			"activeRules": "القواعد النشطة",
+			"avgClickRate": "متوسط النقر",
+			"dmsSent": "DM مرسلة",
+			"linkClicks": "نقرات الرابط"
+		},
+		"queue": {
+			"comment": "تعليق",
+			"description": "رد عام وحالة DM الخاص.",
+			"title": "الردود الأخيرة"
+		},
+		"rules": {
+			"clickRate": "معدل النقر",
+			"description": "أفضل الأتمتات حسب DM المرسلة ومعدل النقر.",
+			"keyword": "الكلمة",
+			"rule": "القاعدة",
+			"sent": "مرسل",
+			"status": "الحالة",
+			"title": "أفضل القواعد"
+		},
+		"title": "مركز تحكم أتمتة الردود"
+	},
+	"days": {
+		"Fri": "الجمعة",
+		"Mon": "الاثنين",
+		"Sat": "السبت",
+		"Sun": "الأحد",
+		"Thu": "الخميس",
+		"Tue": "الثلاثاء",
+		"Wed": "الأربعاء"
+	},
+	"footer": "يستخدم تطبيق CommentVia وضع React Router SPA و oRPC و Better Auth و Postgres.",
+	"layout": {
+		"headerSubtitle": "لوحة أتمتة Instagram",
+		"liveWorkspace": "مساحة عمل مباشرة",
+		"metaBody": "اربط Instagram، طابق التعليقات، واحتفظ بسجل الردود واضحًا.",
+		"metaTitle": "إعداد جاهز لـ Meta",
+		"mobileDescription": "إدارة أتمتة comment-to-DM.",
+		"newRule": "قاعدة جديدة",
+		"openNavigation": "فتح التنقل"
+	},
+	"nav": {
+		"analytics": "التحليلات",
+		"connections": "الاتصالات",
+		"dashboard": "لوحة التحكم",
+		"rules": "القواعد"
+	},
+	"replies": {
+		"genericInbox": "Sent it to your inbox.",
+		"outfitLink": "Check your inbox. I sent the outfit link.",
+		"paintDetails": "Check DM. I shared the paint details."
+	},
+	"ruleNames": {
+		"Hair tools carousel": "كاروسيل أدوات الشعر",
+		"Outfit link on launch Reel": "رابط outfit على Reel الإطلاق",
+		"Studio wall color post": "منشور لون جدار الاستوديو"
+	},
+	"rules": {
+		"description": "الكلمات وروابط DM والردود العامة المكونة حاليًا.",
+		"keyword": "الكلمة",
+		"name": "الاسم",
+		"publicReply": "الرد العام",
+		"status": "الحالة",
+		"title": "قواعد الأتمتة"
+	},
+	"status": {
+		"active": "نشط",
+		"delivered": "تم التسليم",
+		"failed": "فشل",
+		"needs review": "بحاجة لمراجعة",
+		"paused": "متوقف",
+		"review": "مراجعة"
+	},
+	"time": {
+		"13m ago": "قبل 13 د",
+		"2m ago": "قبل 2 د",
+		"8m ago": "قبل 8 د"
+	}
+}

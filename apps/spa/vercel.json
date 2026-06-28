@@ -1,0 +1,12 @@
+{
+	"buildCommand": "cd ../.. && bun install --frozen-lockfile && bun run build:app",
+	"installCommand": "cd ../.. && bun install --frozen-lockfile",
+	"outputDirectory": "build/client",
+	"framework": "vite",
+	"rewrites": [
+		{
+			"source": "/(.*)",
+			"destination": "/index.html"
+		}
+	]
+}

@@ -1,0 +1,141 @@
+{
+	"account": {
+		"settings": "Settings",
+		"signIn": "Sign in",
+		"signOut": "Sign out"
+	},
+	"analytics": {
+		"body": "The analytics route is ready for deeper attribution once real Meta and click events are connected.",
+		"title": "Analytics"
+	},
+	"auth": {
+		"body": "Sign in to manage keyword rules, connect product links, and see which comments turn into clicks.",
+		"title": "Bring your Instagram replies into one clean workspace."
+	},
+	"authUi": {
+		"ALREADY_HAVE_AN_ACCOUNT": "Already have an account?",
+		"DONT_HAVE_AN_ACCOUNT": "Don't have an account?",
+		"EMAIL": "Email",
+		"EMAIL_INSTRUCTIONS": "Please enter a valid email address.",
+		"EMAIL_PLACEHOLDER": "m@example.com",
+		"EMAIL_REQUIRED": "Email address is required",
+		"FORGOT_PASSWORD": "Forgot Password",
+		"FORGOT_PASSWORD_ACTION": "Send reset link",
+		"FORGOT_PASSWORD_DESCRIPTION": "Enter your email to reset your password",
+		"FORGOT_PASSWORD_EMAIL": "Check your email for the password reset link.",
+		"FORGOT_PASSWORD_LINK": "Forgot your password?",
+		"NAME": "Name",
+		"NAME_PLACEHOLDER": "Name",
+		"OR_CONTINUE_WITH": "Or continue with",
+		"PASSWORD": "Password",
+		"PASSWORD_PLACEHOLDER": "Password",
+		"PASSWORD_REQUIRED": "Password is required",
+		"REMEMBER_ME": "Remember me",
+		"REQUEST_FAILED": "Request failed",
+		"RESET_PASSWORD": "Reset Password",
+		"RESET_PASSWORD_ACTION": "Save new password",
+		"RESET_PASSWORD_DESCRIPTION": "Enter your new password below",
+		"SIGN_IN": "Sign In",
+		"SIGN_IN_ACTION": "Login",
+		"SIGN_IN_DESCRIPTION": "Enter your email below to login to your account",
+		"SIGN_IN_WITH": "Continue with",
+		"SIGN_OUT": "Sign Out",
+		"SIGN_UP": "Sign Up",
+		"SIGN_UP_ACTION": "Create an account",
+		"SIGN_UP_DESCRIPTION": "Enter your information to create an account"
+	},
+	"common": {
+		"appName": "CommentVia",
+		"language": "Language"
+	},
+	"dashboard": {
+		"activity": {
+			"clicks": "Clicks",
+			"comments": "Comments",
+			"description": "Daily comment volume, DM sends, and click follow-through.",
+			"dms": "DMs",
+			"title": "Comment to DM flow"
+		},
+		"badge": "30 day view",
+		"dataNote": "Data is served through the typed oRPC dashboard procedure.",
+		"description": "Track keyword rules, DM delivery, and click intent from your Instagram comments.",
+		"metricChangeSuffix": "vs previous period",
+		"metrics": {
+			"activeRules": "Active rules",
+			"avgClickRate": "Avg click rate",
+			"dmsSent": "DMs sent",
+			"linkClicks": "Link clicks"
+		},
+		"queue": {
+			"comment": "Comment",
+			"description": "Public reply plus private DM status.",
+			"title": "Recent replies"
+		},
+		"rules": {
+			"clickRate": "Click rate",
+			"description": "Best performing automations by delivered DMs and click rate.",
+			"keyword": "Keyword",
+			"rule": "Rule",
+			"sent": "Sent",
+			"status": "Status",
+			"title": "Top rules"
+		},
+		"title": "Reply automation command center"
+	},
+	"days": {
+		"Fri": "Fri",
+		"Mon": "Mon",
+		"Sat": "Sat",
+		"Sun": "Sun",
+		"Thu": "Thu",
+		"Tue": "Tue",
+		"Wed": "Wed"
+	},
+	"footer": "CommentVia app uses React Router SPA mode, oRPC, Better Auth, and Postgres.",
+	"layout": {
+		"headerSubtitle": "Instagram automation dashboard",
+		"liveWorkspace": "Live workspace",
+		"metaBody": "Connect Instagram, map comments, and keep the reply trail visible.",
+		"metaTitle": "Meta-ready setup",
+		"mobileDescription": "Manage comment-to-DM automations.",
+		"newRule": "New rule",
+		"openNavigation": "Open navigation"
+	},
+	"nav": {
+		"analytics": "Analytics",
+		"connections": "Connections",
+		"dashboard": "Dashboard",
+		"rules": "Rules"
+	},
+	"replies": {
+		"genericInbox": "Sent it to your inbox.",
+		"outfitLink": "Check your inbox. I sent the outfit link.",
+		"paintDetails": "Check DM. I shared the paint details."
+	},
+	"ruleNames": {
+		"Hair tools carousel": "Hair tools carousel",
+		"Outfit link on launch Reel": "Outfit link on launch Reel",
+		"Studio wall color post": "Studio wall color post"
+	},
+	"rules": {
+		"description": "Keywords, DM links, and public replies currently configured.",
+		"keyword": "Keyword",
+		"name": "Name",
+		"publicReply": "Public reply",
+		"status": "Status",
+		"title": "Automation rules"
+	},
+	"status": {
+		"active": "active",
+		"delivered": "delivered",
+		"failed": "failed",
+		"needs review": "needs review",
+		"paused": "paused",
+		"review": "review"
+	},
+	"time": {
+		"13m ago": "13m ago",
+		"2m ago": "2m ago",
+		"8m ago": "8m ago"
+	}
+}

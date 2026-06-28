@@ -1,0 +1,141 @@
+{
+	"account": {
+		"settings": "Configurações",
+		"signIn": "Entrar",
+		"signOut": "Sair"
+	},
+	"analytics": {
+		"body": "A rota de analytics está pronta para atribuição mais profunda quando eventos reais da Meta e cliques forem conectados.",
+		"title": "Analytics"
+	},
+	"auth": {
+		"body": "Entre para gerenciar regras, conectar links de produto e ver quais comentários viram cliques.",
+		"title": "Traga suas respostas do Instagram para um workspace limpo."
+	},
+	"authUi": {
+		"ALREADY_HAVE_AN_ACCOUNT": "Já tem uma conta?",
+		"DONT_HAVE_AN_ACCOUNT": "Não tem uma conta?",
+		"EMAIL": "Email",
+		"EMAIL_INSTRUCTIONS": "Please enter a valid email address.",
+		"EMAIL_PLACEHOLDER": "m@example.com",
+		"EMAIL_REQUIRED": "Email é obrigatório",
+		"FORGOT_PASSWORD": "Esqueci a senha",
+		"FORGOT_PASSWORD_ACTION": "Enviar link",
+		"FORGOT_PASSWORD_DESCRIPTION": "Digite seu email para redefinir a senha",
+		"FORGOT_PASSWORD_EMAIL": "Confira seu email para o link de redefinição.",
+		"FORGOT_PASSWORD_LINK": "Esqueceu a senha?",
+		"NAME": "Nome",
+		"NAME_PLACEHOLDER": "Nome",
+		"OR_CONTINUE_WITH": "Ou continue com",
+		"PASSWORD": "Senha",
+		"PASSWORD_PLACEHOLDER": "Senha",
+		"PASSWORD_REQUIRED": "Senha é obrigatória",
+		"REMEMBER_ME": "Lembrar-me",
+		"REQUEST_FAILED": "A solicitação falhou",
+		"RESET_PASSWORD": "Redefinir senha",
+		"RESET_PASSWORD_ACTION": "Salvar nova senha",
+		"RESET_PASSWORD_DESCRIPTION": "Digite sua nova senha abaixo",
+		"SIGN_IN": "Entrar",
+		"SIGN_IN_ACTION": "Entrar",
+		"SIGN_IN_DESCRIPTION": "Digite seu email para entrar na conta",
+		"SIGN_IN_WITH": "Continuar com",
+		"SIGN_OUT": "Sair",
+		"SIGN_UP": "Criar conta",
+		"SIGN_UP_ACTION": "Criar conta",
+		"SIGN_UP_DESCRIPTION": "Digite suas informações para criar uma conta"
+	},
+	"common": {
+		"appName": "CommentVia",
+		"language": "Idioma"
+	},
+	"dashboard": {
+		"activity": {
+			"clicks": "Cliques",
+			"comments": "Comentários",
+			"description": "Volume diário de comentários, DMs e cliques.",
+			"dms": "DMs",
+			"title": "Fluxo comentário para DM"
+		},
+		"badge": "30 dias",
+		"dataNote": "Os dados vêm do procedure tipado de oRPC.",
+		"description": "Acompanhe regras, DMs e intenção de clique dos comentários do Instagram.",
+		"metricChangeSuffix": "vs período anterior",
+		"metrics": {
+			"activeRules": "Regras ativas",
+			"avgClickRate": "Taxa média",
+			"dmsSent": "DMs enviados",
+			"linkClicks": "Cliques em links"
+		},
+		"queue": {
+			"comment": "Comentário",
+			"description": "Resposta pública e status da DM privada.",
+			"title": "Respostas recentes"
+		},
+		"rules": {
+			"clickRate": "Taxa de clique",
+			"description": "Automações com melhor desempenho por DMs e cliques.",
+			"keyword": "Keyword",
+			"rule": "Regra",
+			"sent": "Enviados",
+			"status": "Status",
+			"title": "Principais regras"
+		},
+		"title": "Central de automação de respostas"
+	},
+	"days": {
+		"Fri": "Sex",
+		"Mon": "Seg",
+		"Sat": "Sáb",
+		"Sun": "Dom",
+		"Thu": "Qui",
+		"Tue": "Ter",
+		"Wed": "Qua"
+	},
+	"footer": "O app CommentVia usa React Router SPA mode, oRPC, Better Auth e Postgres.",
+	"layout": {
+		"headerSubtitle": "Dashboard de automação do Instagram",
+		"liveWorkspace": "Workspace ao vivo",
+		"metaBody": "Conecte Instagram, mapeie comentários e mantenha o histórico visível.",
+		"metaTitle": "Pronto para Meta",
+		"mobileDescription": "Gerencie automações comment-to-DM.",
+		"newRule": "Nova regra",
+		"openNavigation": "Abrir navegação"
+	},
+	"nav": {
+		"analytics": "Analytics",
+		"connections": "Conexões",
+		"dashboard": "Dashboard",
+		"rules": "Regras"
+	},
+	"replies": {
+		"genericInbox": "Sent it to your inbox.",
+		"outfitLink": "Check your inbox. I sent the outfit link.",
+		"paintDetails": "Check DM. I shared the paint details."
+	},
+	"ruleNames": {
+		"Hair tools carousel": "Carrossel de ferramentas de cabelo",
+		"Outfit link on launch Reel": "Link do outfit no Reel de lançamento",
+		"Studio wall color post": "Post da cor da parede do estúdio"
+	},
+	"rules": {
+		"description": "Keywords, links de DM e respostas públicas configuradas.",
+		"keyword": "Keyword",
+		"name": "Nome",
+		"publicReply": "Resposta pública",
+		"status": "Status",
+		"title": "Regras de automação"
+	},
+	"status": {
+		"active": "ativa",
+		"delivered": "entregue",
+		"failed": "falhou",
+		"needs review": "precisa revisão",
+		"paused": "pausada",
+		"review": "revisão"
+	},
+	"time": {
+		"13m ago": "há 13 min",
+		"2m ago": "há 2 min",
+		"8m ago": "há 8 min"
+	}
+}

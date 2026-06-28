@@ -1,0 +1,15 @@
+{
+	"extends": "../../tsconfig.base.json",
+	"references": [{ "path": "../contract" }, { "path": "../util" }],
+	"compilerOptions": {
+		"rootDir": "src",
+		"outDir": "dist",
+		"composite": true,
+		"emitDeclarationOnly": true,
+		"noEmit": false,
+		"allowImportingTsExtensions": false,
+		"lib": ["DOM", "DOM.Iterable", "ES2024"],
+		"types": ["bun"]
+	},
+	"include": ["src"]
+}

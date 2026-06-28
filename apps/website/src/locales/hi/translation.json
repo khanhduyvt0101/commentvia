@@ -1,0 +1,115 @@
+{
+	"nav": {
+		"how": "यह कैसे काम करता है",
+		"useCases": "उपयोग के मामले",
+		"pricing": "कीमतें",
+		"faq": "FAQ",
+		"signIn": "साइन इन करें",
+		"getStarted": "शुरू करें",
+		"language": "भाषा",
+		"menu": "मेन्यू",
+		"closeMenu": "मेन्यू बंद करें"
+	},
+	"hero": {
+		"title": "Instagram कमेंट्स को तुरंत DM links में बदलें",
+		"body": "दर्शक outfit, hair या paint जैसे keyword पर कमेंट करते हैं — CommentVia उन्हें आपके product link के साथ तुरंत DM भेजता है।",
+		"proofs": ["100% ऑटोमेटेड", "तुरंत DM डिलीवरी", "ज़्यादा सेव, क्लिक और बिक्री"],
+		"replyAccount": "yourusername",
+		"replyText": "अपना inbox चेक करें"
+	},
+	"workflow": {
+		"title": "मिनटों में comment-to-DM flow लॉन्च करें",
+		"body": "सबसे अच्छे creator tools रास्ता छोटा रखते हैं: post चुनें, comment match करें, सही link भेजें, फिर देखें क्या convert होता है।",
+		"steps": [
+			[
+				"एक नियम बनाएं",
+				"उस post या Reel को connect करें जिस पर पहले से attention आ रहा है।"
+			],
+			[
+				"Intent match करें",
+				"outfit, link, recipe, size, price या paint जैसे keywords इस्तेमाल करें।"
+			],
+			[
+				"निजी तौर पर reply करें",
+				"Commenters को अपना inbox चेक करने के लिए कहें और shopping link deliver करें।"
+			]
+		]
+	},
+	"useCases": {
+		"title": "उन creators के लिए बनाया गया है जो comments के ज़रिए बेचते हैं",
+		"items": [
+			[
+				"Fashion drops",
+				"outfit, size और link वाले comments को private product links में बदलें।"
+			],
+			[
+				"Beauty tutorials",
+				"जब followers hair, brush या shade पूछें, तो product lists भेजें।"
+			],
+			[
+				"Digital products",
+				"एक keyword से guides, templates, presets या lead magnets deliver करें।"
+			]
+		]
+	},
+	"analytics": {
+		"title": "जानें कौन से comments clicks बनते हैं",
+		"body": "Active rules, matched keywords, भेजे गए DMs और link clicks track करें, ताकि हर caption और smarter बने।",
+		"stats": [
+			["1,234", "Matched comments"],
+			["892", "DMs भेजे गए"],
+			["38%", "Click-through rate"]
+		]
+	},
+	"trust": {
+		"title": "आधिकारिक Meta प्रक्रिया को ध्यान में रखकर डिज़ाइन किया गया",
+		"body": "Build करते समय tester accounts इस्तेमाल करें। Public SaaS के लिए, Instagram comment और messaging permissions हेतु Meta App Review और Advanced Access request करें।",
+		"items": [
+			"Creator या Business account",
+			"Connected Facebook Page",
+			"Comment webhook events",
+			"Private reply / messaging permission"
+		]
+	},
+	"pricing": {
+		"title": "पहले नियम के लिए सरल pricing",
+		"body": "एक automation से शुरू करें, workflow साबित करें, फिर ज़्यादा posts और campaigns तक scale करें।",
+		"plan": "Creator",
+		"price": "$19",
+		"period": "/माह",
+		"features": [
+			"असीमित कीवर्ड",
+			"Instagram पोस्ट और Reel नियम",
+			"Auto DM प्रीव्यू",
+			"बेसिक एनालिटिक्स"
+		]
+	},
+	"faq": {
+		"title": "क्रिएटर्स सबसे पहले ये सवाल पूछते हैं",
+		"items": [
+			[
+				"क्या यह मेरे बायो के लिंक की जगह लेता है?",
+				"नहीं। जब कोई कमेंट में पूछता है, तो यह वही लिंक निजी तौर पर भेजता है।"
+			],
+			[
+				"क्या मैं Meta approval से पहले इसका इस्तेमाल कर सकता/सकती हूँ?",
+				"पब्लिक एक्सेस से पहले आप ऐप रोल्स और टेस्टर अकाउंट्स के साथ लोकली टेस्ट कर सकते हैं।"
+			],
+			[
+				"कैप्शन में क्या लिखना चाहिए?",
+				"एक स्पष्ट CTA इस्तेमाल करें, जैसे: Comment outfit और अपना इनबॉक्स चेक करें।"
+			]
+		]
+	},
+	"cta": {
+		"title": "कमेंट्स को ग्राहकों में बदलने के लिए तैयार हैं?",
+		"body": "अपना पहला auto-DM नियम बनाएं और जैसे ही कोई पूछे, सही लिंक भेजना शुरू करें।"
+	},
+	"footer": {
+		"theme": "थीम",
+		"system": "सिस्टम",
+		"light": "लाइट",
+		"dark": "डार्क",
+		"tagline": "क्रिएटर कॉमर्स के लिए Comment-to-DM ऑटोमेशन।"
+	}
+}

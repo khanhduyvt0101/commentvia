@@ -1,0 +1,32 @@
+{
+	"name": "@commentvia/website",
+	"version": "0.0.0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "vite --host 0.0.0.0 --port 41410",
+		"i18n:extract": "cd ../.. && i18next-cli --config apps/website/i18next.config.ts extract",
+		"i18n:prepare": "cd ../.. && bun run i18n:prepare",
+		"i18n:sync": "cd ../.. && i18next-cli --config apps/website/i18next.config.ts sync",
+		"i18n:status": "cd ../.. && i18next-cli --config apps/website/i18next.config.ts status",
+		"i18n:types": "cd ../.. && i18next-cli --config apps/website/i18next.config.ts types",
+		"start": "vite preview --host 0.0.0.0 --port 41410",
+		"typecheck": "tsc -b",
+		"build": "tsc -b && vite build && bun scripts/generate-seo.ts"
+	},
+	"dependencies": {
+		"@commentvia/client": "workspace:^",
+		"@vitejs/plugin-react": "^6.0.2",
+		"i18next": "^26.3.3",
+		"i18next-browser-languagedetector": "^8.2.1",
+		"lucide-react": "^1.21.0",
+		"react": "^19.2.7",
+		"react-dom": "^19.2.7",
+		"react-i18next": "^17.0.8",
+		"vite": "^8.0.16"
+	},
+	"devDependencies": {
+		"@types/react": "^19.2.17",
+		"@types/react-dom": "^19.2.3"
+	}
+}

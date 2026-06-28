@@ -1,0 +1,10 @@
+node_modules
+dist
+build
+.react-router
+.tsc
+*.tsbuildinfo
+.vercel
+.env
+.env.local
+.DS_Store

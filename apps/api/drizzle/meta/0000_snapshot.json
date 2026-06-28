@@ -1,0 +1,311 @@
+{
+	"id": "202886d3-2e5d-40e3-8e86-26339d160abb",
+	"prevId": "00000000-0000-0000-0000-000000000000",
+	"version": "7",
+	"dialect": "postgresql",
+	"tables": {
+		"public.activity_daily": {
+			"name": "activity_daily",
+			"schema": "",
+			"columns": {
+				"day": {
+					"name": "day",
+					"type": "text",
+					"primaryKey": true,
+					"notNull": true
+				},
+				"comments": {
+					"name": "comments",
+					"type": "integer",
+					"primaryKey": false,
+					"notNull": true,
+					"default": 0
+				},
+				"dms": {
+					"name": "dms",
+					"type": "integer",
+					"primaryKey": false,
+					"notNull": true,
+					"default": 0
+				},
+				"clicks": {
+					"name": "clicks",
+					"type": "integer",
+					"primaryKey": false,
+					"notNull": true,
+					"default": 0
+				}
+			},
+			"indexes": {},
+			"foreignKeys": {},
+			"compositePrimaryKeys": {},
+			"uniqueConstraints": {},
+			"policies": {},
+			"checkConstraints": {},
+			"isRLSEnabled": false
+		},
+		"public.keyword_rules": {
+			"name": "keyword_rules",
+			"schema": "",
+			"columns": {
+				"id": {
+					"name": "id",
+					"type": "text",
+					"primaryKey": true,
+					"notNull": true
+				},
+				"name": {
+					"name": "name",
+					"type": "text",
+					"primaryKey": false,
+					"notNull": true
+				},
+				"post_url": {
+					"name": "post_url",
+					"type": "text",
+					"primaryKey": false,
+					"notNull": true
+				},
+				"keyword": {
+					"name": "keyword",
+					"type": "text",
+					"primaryKey": false,
+					"notNull": true
+				},
+				"dm_link": {
+					"name": "dm_link",
+					"type": "text",
+					"primaryKey": false,
+					"notNull": true
+				},
+				"dm_message": {
+					"name": "dm_message",
+					"type": "text",
+					"primaryKey": false,
+					"notNull": true
+				},
+				"public_reply": {
+					"name": "public_reply",
+					"type": "text",
+					"primaryKey": false,
+					"notNull": true
+				},
+				"status": {
+					"name": "status",
+					"type": "rule_status",
+					"typeSchema": "public",
+					"primaryKey": false,
+					"notNull": true,
+					"default": "'active'"
+				},
+				"enabled": {
+					"name": "enabled",
+					"type": "boolean",
+					"primaryKey": false,
+					"notNull": true,
+					"default": true
+				},
+				"sent": {
+					"name": "sent",
+					"type": "integer",
+					"primaryKey": false,
+					"notNull": true,
+					"default": 0
+				},
+				"clicks": {
+					"name": "clicks",
+					"type": "integer",
+					"primaryKey": false,
+					"notNull": true,
+					"default": 0
+				},
+				"created_at": {
+					"name": "created_at",
+					"type": "timestamp with time zone",
+					"primaryKey": false,
+					"notNull": true,
+					"default": "now()"
+				},
+				"updated_at": {
+					"name": "updated_at",
+					"type": "timestamp with time zone",
+					"primaryKey": false,
+					"notNull": true,
+					"default": "now()"
+				}
+			},
+			"indexes": {
+				"keyword_rules_keyword_idx": {
+					"name": "keyword_rules_keyword_idx",
+					"columns": [
+						{
+							"expression": "keyword",
+							"isExpression": false,
+							"asc": true,
+							"nulls": "last"
+						}
+					],
+					"isUnique": false,
+					"concurrently": false,
+					"method": "btree",
+					"with": {}
+				},
+				"keyword_rules_status_idx": {
+					"name": "keyword_rules_status_idx",
+					"columns": [
+						{
+							"expression": "status",
+							"isExpression": false,
+							"asc": true,
+							"nulls": "last"
+						}
+					],
+					"isUnique": false,
+					"concurrently": false,
+					"method": "btree",
+					"with": {}
+				}
+			},
+			"foreignKeys": {},
+			"compositePrimaryKeys": {},
+			"uniqueConstraints": {},
+			"policies": {},
+			"checkConstraints": {},
+			"isRLSEnabled": false
+		},
+		"public.reply_events": {
+			"name": "reply_events",
+			"schema": "",
+			"columns": {
+				"id": {
+					"name": "id",
+					"type": "text",
+					"primaryKey": true,
+					"notNull": true
+				},
+				"rule_id": {
+					"name": "rule_id",
+					"type": "text",
+					"primaryKey": false,
+					"notNull": true
+				},
+				"viewer": {
+					"name": "viewer",
+					"type": "text",
+					"primaryKey": false,
+					"notNull": true
+				},
+				"comment": {
+					"name": "comment",
+					"type": "text",
+					"primaryKey": false,
+					"notNull": true
+				},
+				"reply": {
+					"name": "reply",
+					"type": "text",
+					"primaryKey": false,
+					"notNull": true
+				},
+				"status": {
+					"name": "status",
+					"type": "reply_status",
+					"typeSchema": "public",
+					"primaryKey": false,
+					"notNull": true,
+					"default": "'delivered'"
+				},
+				"time_label": {
+					"name": "time_label",
+					"type": "text",
+					"primaryKey": false,
+					"notNull": true
+				},
+				"received_at": {
+					"name": "received_at",
+					"type": "timestamp with time zone",
+					"primaryKey": false,
+					"notNull": true,
+					"default": "now()"
+				},
+				"created_at": {
+					"name": "created_at",
+					"type": "timestamp with time zone",
+					"primaryKey": false,
+					"notNull": true,
+					"default": "now()"
+				}
+			},
+			"indexes": {
+				"reply_events_received_at_idx": {
+					"name": "reply_events_received_at_idx",
+					"columns": [
+						{
+							"expression": "received_at",
+							"isExpression": false,
+							"asc": true,
+							"nulls": "last"
+						}
+					],
+					"isUnique": false,
+					"concurrently": false,
+					"method": "btree",
+					"with": {}
+				},
+				"reply_events_rule_id_idx": {
+					"name": "reply_events_rule_id_idx",
+					"columns": [
+						{
+							"expression": "rule_id",
+							"isExpression": false,
+							"asc": true,
+							"nulls": "last"
+						}
+					],
+					"isUnique": false,
+					"concurrently": false,
+					"method": "btree",
+					"with": {}
+				}
+			},
+			"foreignKeys": {
+				"reply_events_rule_id_keyword_rules_id_fk": {
+					"name": "reply_events_rule_id_keyword_rules_id_fk",
+					"tableFrom": "reply_events",
+					"tableTo": "keyword_rules",
+					"columnsFrom": ["rule_id"],
+					"columnsTo": ["id"],
+					"onDelete": "cascade",
+					"onUpdate": "no action"
+				}
+			},
+			"compositePrimaryKeys": {},
+			"uniqueConstraints": {},
+			"policies": {},
+			"checkConstraints": {},
+			"isRLSEnabled": false
+		}
+	},
+	"enums": {
+		"public.reply_status": {
+			"name": "reply_status",
+			"schema": "public",
+			"values": ["delivered", "needs review", "failed"]
+		},
+		"public.rule_status": {
+			"name": "rule_status",
+			"schema": "public",
+			"values": ["active", "paused", "review"]
+		}
+	},
+	"schemas": {},
+	"sequences": {},
+	"roles": {},
+	"policies": {},
+	"views": {},
+	"_meta": {
+		"columns": {},
+		"schemas": {},
+		"tables": {}
+	}
+}
