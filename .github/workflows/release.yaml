@@ -17,6 +17,7 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     permissions:
+      actions: write
       contents: write
       pull-requests: read
     steps:
@@ -47,3 +48,8 @@ jobs:
         run: |
           NOTES=$(awk "/^## ${VERSION}/{found=1; next} /^## [0-9]/{if(found) exit} found" apps/api/CHANGELOG.md)
           gh release create "v${VERSION}" --title "v${VERSION}" --notes "${NOTES:-CommentVia v${VERSION}}"
+      - name: Dispatch CI/CD
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERSION: ${{ steps.version.outputs.version }}
+        run: gh workflow run ci-cd.yaml --ref "v${VERSION}"
