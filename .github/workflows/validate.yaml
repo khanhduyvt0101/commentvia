@@ -17,6 +17,8 @@ jobs:
       pull-requests: read
     steps:
       - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
       - uses: ./.github/actions/prepare
       - name: Check release plan
         run: bun --bun changeset status --since=origin/main
