@@ -1,8 +1,27 @@
-import { type BetterAuthOptions, betterAuth } from "better-auth";
+import { isLive } from "@commentvia/util";
+import { APIError, type BetterAuthOptions, betterAuth } from "better-auth";
 import { getMigrations } from "better-auth/db/migration";
 import { pgPool } from "./db/client";
 import { apiOrigin, appOrigin } from "./db/env";
 import { facebookLoginPermissions } from "./meta";
+
+const allowedProductionSignupEmails = new Set(["khanhduyvt0101@gmail.com"]);
+
+const normalizeEmail = (email: string) => email.trim().toLocaleLowerCase();
+
+const assertCanCreateAccount = (email: string) => {
+	if (!isLive) {
+		return;
+	}
+
+	if (allowedProductionSignupEmails.has(normalizeEmail(email))) {
+		return;
+	}
+
+	throw new APIError("FORBIDDEN", {
+		message: "CommentVia is invite-only right now.",
+	});
+};
 
 const googleClientId = process.env.GOOGLE_CLIENT_ID;
 const googleClientSecret = process.env.GOOGLE_CLIENT_SECRET;
@@ -40,6 +59,15 @@ export const authOptions = {
 	baseURL: apiOrigin,
 	basePath: "/api/auth",
 	database: pgPool,
+	databaseHooks: {
+		user: {
+			create: {
+				before: async (user) => {
+					assertCanCreateAccount(user.email);
+				},
+			},
+		},
+	},
 	emailAndPassword: {
 		enabled: true,
 		requireEmailVerification: false,

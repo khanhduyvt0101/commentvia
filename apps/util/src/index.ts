@@ -10,6 +10,58 @@ export const localWebsiteBaseUrl = "http://localhost:41410";
 
 const viteEnv = () => (import.meta as ImportMetaWithEnv).env;
 
+const parseBooleanEnv = (value: string | boolean | undefined) => {
+	if (value === undefined) {
+		return undefined;
+	}
+
+	if (typeof value === "boolean") {
+		return value;
+	}
+
+	if (value === "1" || value === "true") {
+		return true;
+	}
+
+	if (value === "0" || value === "false") {
+		return false;
+	}
+
+	return undefined;
+};
+
+const getCommentViaLocalEnv = () => {
+	const env = viteEnv();
+
+	return (
+		getProcessEnv("COMMENTVIA_LOCAL") ??
+		getProcessEnv("NEXT_PUBLIC_COMMENTVIA_LOCAL") ??
+		env?.VITE_COMMENTVIA_LOCAL
+	);
+};
+
+const getProcessEnv = (key: string) => {
+	try {
+		return process.env[key];
+	} catch {
+		return undefined;
+	}
+};
+
+const getViteProdEnv = () => {
+	const value = viteEnv()?.PROD;
+
+	return parseBooleanEnv(value);
+};
+
+const localOverride = parseBooleanEnv(getCommentViaLocalEnv());
+
+export const isLocal =
+	localOverride ??
+	!(getProcessEnv("NODE_ENV") === "production" || getViteProdEnv());
+
+export const isLive = !isLocal;
+
 export const getDefaultApiBaseUrl = () =>
 	viteEnv()?.VITE_API_URL ?? localApiBaseUrl;
 
