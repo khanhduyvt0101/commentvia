@@ -70,9 +70,9 @@ export const getPublicOrigins = () => {
 		apiUrl,
 		appUrl,
 		websiteUrl,
-		dataDeletionUrl: `${websiteUrl}/data-deletion`,
-		privacyUrl: `${websiteUrl}/privacy`,
-		termsUrl: `${websiteUrl}/terms`,
+		dataDeletionUrl: `${websiteUrl}/en/data-deletion`,
+		privacyUrl: `${websiteUrl}/en/privacy`,
+		termsUrl: `${websiteUrl}/en/terms`,
 	};
 };
 

@@ -9,6 +9,7 @@ import { CORSPlugin } from "@orpc/server/plugins";
 import { auth } from "./auth";
 import { prepareDatabase } from "./db/migrations";
 import {
+	getPublicOrigins,
 	handleCommentAutomation,
 	handleMetaDataDeletion,
 	requiredMetaPermissions,
@@ -123,12 +124,14 @@ const server = Bun.serve({
 		}
 
 		if (url.pathname === "/meta/requirements") {
+			const origins = getPublicOrigins();
+
 			return json({
 				productionNeedsMetaReview: true,
 				permissions: requiredMetaPermissions,
 				accountType:
 					"Instagram Creator or Business account connected to a Facebook Page",
-				dataDeletionUrl: `${websiteOrigin}/data-deletion`,
+				dataDeletionUrl: origins.dataDeletionUrl,
 				oAuthCallbackUrl: `${url.origin}/meta/oauth/callback`,
 			});
 		}
