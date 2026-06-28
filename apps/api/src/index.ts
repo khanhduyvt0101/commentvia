@@ -132,7 +132,7 @@ const server = Bun.serve({
 				accountType:
 					"Instagram Creator or Business account connected to a Facebook Page",
 				dataDeletionUrl: origins.dataDeletionUrl,
-				oAuthCallbackUrl: `${url.origin}/meta/oauth/callback`,
+				oAuthCallbackUrl: `${origins.apiUrl}/meta/oauth/callback`,
 			});
 		}
 
