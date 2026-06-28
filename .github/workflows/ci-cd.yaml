@@ -11,14 +11,13 @@ concurrency:
 jobs:
   api:
     if: github.event_name == 'workflow_dispatch' || startsWith(github.ref, 'refs/tags/v')
-    uses: ./.github/workflows/publish-dokploy-app.yaml
-    secrets: inherit
-    permissions:
-      contents: read
-      packages: write
-    with:
-      project: commentvia-api
-      dokploy-app-id: ${{ vars.COMMENTVIA_API_DOKPLOY_APP_ID }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: ./.github/actions/trigger-dokploy-deployment
+        with:
+          api-key: ${{ secrets.DOKPLOY_API_KEY }}
+          app-id: ${{ vars.COMMENTVIA_API_DOKPLOY_APP_ID }}
 
   website:
     if: github.event_name == 'workflow_dispatch' || startsWith(github.ref, 'refs/tags/v')
