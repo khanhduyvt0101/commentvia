@@ -2,9 +2,9 @@ import { timingSafeEqual } from "node:crypto";
 import type { InstagramCommentEvent, KeywordRule } from "@commentvia/util";
 import {
 	findMatchingRule,
-	localApiBaseUrl,
-	localAppBaseUrl,
-	localWebsiteBaseUrl,
+	getDefaultApiBaseUrl,
+	getDefaultAppBaseUrl,
+	getDefaultWebsiteBaseUrl,
 	trimTrailingSlash,
 } from "@commentvia/util";
 
@@ -60,11 +60,9 @@ export const facebookLoginPermissions = [
 export const requiredMetaPermissions = metaConnectionPermissions;
 
 export const getPublicOrigins = () => {
-	const apiUrl = trimTrailingSlash(process.env.API_ORIGIN ?? localApiBaseUrl);
-	const appUrl = trimTrailingSlash(process.env.APP_ORIGIN ?? localAppBaseUrl);
-	const websiteUrl = trimTrailingSlash(
-		process.env.WEBSITE_ORIGIN ?? localWebsiteBaseUrl,
-	);
+	const apiUrl = trimTrailingSlash(getDefaultApiBaseUrl());
+	const appUrl = trimTrailingSlash(getDefaultAppBaseUrl());
+	const websiteUrl = trimTrailingSlash(getDefaultWebsiteBaseUrl());
 
 	return {
 		apiUrl,

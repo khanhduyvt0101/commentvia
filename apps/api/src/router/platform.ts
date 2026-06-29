@@ -1,7 +1,7 @@
 import {
-	localApiBaseUrl,
-	localAppBaseUrl,
-	localWebsiteBaseUrl,
+	getDefaultApiBaseUrl,
+	getDefaultAppBaseUrl,
+	getDefaultWebsiteBaseUrl,
 	trimTrailingSlash,
 } from "@commentvia/util";
 import {
@@ -14,11 +14,9 @@ import { procedure } from "../orpc";
 
 export const platformReadiness = procedure.platformReadiness.handler(() => {
 	const origins = getPublicOrigins();
-	const apiUrl = trimTrailingSlash(process.env.API_ORIGIN ?? localApiBaseUrl);
-	const appUrl = trimTrailingSlash(process.env.APP_ORIGIN ?? localAppBaseUrl);
-	const websiteUrl = trimTrailingSlash(
-		process.env.WEBSITE_ORIGIN ?? localWebsiteBaseUrl,
-	);
+	const apiUrl = trimTrailingSlash(getDefaultApiBaseUrl());
+	const appUrl = trimTrailingSlash(getDefaultAppBaseUrl());
+	const websiteUrl = trimTrailingSlash(getDefaultWebsiteBaseUrl());
 	const metaConfig = getMetaConfig();
 	const googleEnabled = Boolean(
 		process.env.GOOGLE_CLIENT_ID && process.env.GOOGLE_CLIENT_SECRET,

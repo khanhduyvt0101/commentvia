@@ -1,4 +1,5 @@
 import { commentViaUrls } from "@commentvia/client/urls";
+import { getDefaultWebsiteBaseUrl, trimTrailingSlash } from "@commentvia/util";
 import {
 	ArrowRight,
 	Check,
@@ -26,7 +27,7 @@ import {
 } from "./i18n";
 
 const { signIn: signInUrl, signUp: signUpUrl } = commentViaUrls;
-const siteUrl = "https://commentvia.com";
+const siteUrl = trimTrailingSlash(getDefaultWebsiteBaseUrl());
 const ogImageUrl = `${siteUrl}/og-image.png`;
 const defaultDescription =
 	"CommentVia sends Instagram product links by DM when viewers comment a keyword on a post or Reel.";

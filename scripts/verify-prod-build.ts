@@ -1,5 +1,9 @@
 import { readdir, readFile, stat } from "node:fs/promises";
 import { join, relative } from "node:path";
+import {
+	productionApiBaseUrl,
+	productionAppBaseUrl,
+} from "../apps/util/src/index";
 
 const workspaceRoot = new URL("..", import.meta.url).pathname;
 const websiteDist = join(workspaceRoot, "apps/website/dist");
@@ -79,7 +83,7 @@ async function verifyWebsiteBuild() {
 			)
 		).join("\n");
 		assert(
-			bundleText.includes("https://app.commentvia.com"),
+			bundleText.includes(productionAppBaseUrl),
 			"Website build does not include the production app URL",
 		);
 	}
@@ -111,7 +115,7 @@ async function verifyAppBuild() {
 			)
 		).join("\n");
 		assert(
-			bundleText.includes("https://api.commentvia.com"),
+			bundleText.includes(productionApiBaseUrl),
 			"SPA build does not include the production API URL",
 		);
 	}

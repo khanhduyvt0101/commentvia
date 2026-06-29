@@ -1,8 +1,8 @@
 import {
+	getDefaultAppBaseUrl,
+	getDefaultWebsiteBaseUrl,
 	instagramCommentEventSchema,
 	keywordRuleSchema,
-	localAppBaseUrl,
-	localWebsiteBaseUrl,
 } from "@commentvia/util";
 import { RPCHandler } from "@orpc/server/fetch";
 import { CORSPlugin } from "@orpc/server/plugins";
@@ -37,8 +37,8 @@ const json = (payload: unknown, status = 200) =>
 		headers: { "Content-Type": "application/json" },
 	});
 
-const appOrigin = process.env.APP_ORIGIN ?? localAppBaseUrl;
-const websiteOrigin = process.env.WEBSITE_ORIGIN ?? localWebsiteBaseUrl;
+const appOrigin = getDefaultAppBaseUrl();
+const websiteOrigin = getDefaultWebsiteBaseUrl();
 const allowedBrowserOrigins = new Set([appOrigin, websiteOrigin]);
 
 const getCorsHeaders = (request: Request) => {

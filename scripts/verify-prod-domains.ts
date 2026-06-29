@@ -1,3 +1,9 @@
+import {
+	productionApiBaseUrl,
+	productionAppBaseUrl,
+	productionWebsiteBaseUrl,
+} from "../apps/util/src/index";
+
 const devOriginPattern = /https?:\/\/localhost:4141[0-2]|localhost:4141[0-2]/;
 
 type FetchedAsset = {
@@ -73,7 +79,7 @@ function assertNoDevOrigins(label: string, text: string) {
 }
 
 async function verifyWebsite() {
-	const origin = "https://commentvia.com";
+	const origin = productionWebsiteBaseUrl;
 	const html = await fetchText(`${origin}/en/`);
 	assertNoDevOrigins("Website HTML", html);
 	assert(
@@ -89,14 +95,14 @@ async function verifyWebsite() {
 	const combined = assets.map((asset) => asset.body).join("\n");
 	assertNoDevOrigins("Website assets", combined);
 	assert(
-		combined.includes("https://app.commentvia.com"),
+		combined.includes(productionAppBaseUrl),
 		"Website assets do not point at the production app domain",
 	);
 	console.log(`[verify-prod-domains] Website OK (${assets.length} assets).`);
 }
 
 async function verifyApp() {
-	const origin = "https://app.commentvia.com";
+	const origin = productionAppBaseUrl;
 	const html = await fetchText(`${origin}/`);
 	assertNoDevOrigins("SPA HTML", html);
 	assert(
@@ -108,14 +114,14 @@ async function verifyApp() {
 	const combined = assets.map((asset) => asset.body).join("\n");
 	assertNoDevOrigins("SPA assets", combined);
 	assert(
-		combined.includes("https://api.commentvia.com"),
+		combined.includes(productionApiBaseUrl),
 		"SPA assets do not point at the production API domain",
 	);
 	console.log(`[verify-prod-domains] SPA OK (${assets.length} assets).`);
 }
 
 async function verifyApi() {
-	const body = await fetchText("https://api.commentvia.com/health");
+	const body = await fetchText(`${productionApiBaseUrl}/health`);
 	const health = JSON.parse(body) as { ok?: boolean; service?: string };
 	assert(health.ok === true, "API health response did not include ok=true");
 	assert(

@@ -39,6 +39,7 @@ const getCommentViaLocalEnv = () => {
 	return (
 		getProcessEnv("COMMENTVIA_LOCAL") ??
 		getProcessEnv("NEXT_PUBLIC_COMMENTVIA_LOCAL") ??
+		getProcessEnv("VITE_COMMENTVIA_LOCAL") ??
 		env?.VITE_COMMENTVIA_LOCAL
 	);
 };
@@ -82,14 +83,20 @@ const getLocalBrowserBaseUrl = (port: number) => {
 
 export const getDefaultApiBaseUrl = () =>
 	viteEnv()?.VITE_API_URL ??
+	getProcessEnv("VITE_API_URL") ??
+	getProcessEnv("API_ORIGIN") ??
 	(isLive ? productionApiBaseUrl : getLocalBrowserBaseUrl(41412));
 
 export const getDefaultAppBaseUrl = () =>
 	viteEnv()?.VITE_APP_URL ??
+	getProcessEnv("VITE_APP_URL") ??
+	getProcessEnv("APP_ORIGIN") ??
 	(isLive ? productionAppBaseUrl : getLocalBrowserBaseUrl(41411));
 
 export const getDefaultWebsiteBaseUrl = () =>
 	viteEnv()?.VITE_WEBSITE_URL ??
+	getProcessEnv("VITE_WEBSITE_URL") ??
+	getProcessEnv("WEBSITE_ORIGIN") ??
 	(isLive ? productionWebsiteBaseUrl : getLocalBrowserBaseUrl(41410));
 
 export const trimTrailingSlash = (value: string) => value.replace(/\/+$/, "");

@@ -1,5 +1,6 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
+import { getDefaultWebsiteBaseUrl, trimTrailingSlash } from "@commentvia/util";
 import ar from "../src/locales/ar/translation.json";
 import de from "../src/locales/de/translation.json";
 import en from "../src/locales/en/translation.json";
@@ -11,7 +12,7 @@ import pt from "../src/locales/pt/translation.json";
 import vi from "../src/locales/vi/translation.json";
 import zh from "../src/locales/zh/translation.json";
 
-const siteUrl = "https://commentvia.com";
+const siteUrl = trimTrailingSlash(getDefaultWebsiteBaseUrl());
 const siteRootUrl = `${siteUrl}/`;
 const brandName = "CommentVia";
 const distDir = new URL("../dist", import.meta.url).pathname;
