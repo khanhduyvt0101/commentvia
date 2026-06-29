@@ -30,11 +30,16 @@ jobs:
       - uses: ./.github/actions/prepare
       - name: Build website
         env:
+          REQUIRE_PROD_URLS: "true"
           VITE_API_URL: https://api.commentvia.com
           VITE_APP_URL: https://app.commentvia.com
           VITE_COMMENTVIA_LOCAL: "false"
           VITE_WEBSITE_URL: https://commentvia.com
         run: bun run build:website
+      - name: Verify website build artifacts
+        env:
+          REQUIRE_PROD_URLS: "true"
+        run: bun scripts/verify-prod-build.ts --website
       - name: Deploy website
         env:
           VERCEL_ORG_ID: ${{ vars.VERCEL_ORG_ID }}
@@ -57,11 +62,16 @@ jobs:
       - uses: ./.github/actions/prepare
       - name: Build app
         env:
+          REQUIRE_PROD_URLS: "true"
           VITE_API_URL: https://api.commentvia.com
           VITE_APP_URL: https://app.commentvia.com
           VITE_COMMENTVIA_LOCAL: "false"
           VITE_WEBSITE_URL: https://commentvia.com
         run: bun run build:app
+      - name: Verify app build artifacts
+        env:
+          REQUIRE_PROD_URLS: "true"
+        run: bun scripts/verify-prod-build.ts --app
       - name: Deploy app
         env:
           VERCEL_ORG_ID: ${{ vars.VERCEL_ORG_ID }}
@@ -75,3 +85,13 @@ jobs:
           printf '{"orgId":"%s","projectId":"%s"}\n' "$VERCEL_ORG_ID" "$VERCEL_PROJECT_ID" > /tmp/commentvia-app/.vercel/project.json
           cd /tmp/commentvia-app
           bunx --bun vercel@latest deploy --prod --yes --token "$VERCEL_TOKEN"
+
+  verify-production:
+    if: github.event_name == 'workflow_dispatch' || startsWith(github.ref, 'refs/tags/v')
+    needs: [api, website, app]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: ./.github/actions/prepare
+      - name: Verify production domains
+        run: bun run verify:prod

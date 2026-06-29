@@ -7,6 +7,9 @@ export type ImportMetaWithEnv = ImportMeta & {
 export const localApiBaseUrl = "http://localhost:41412";
 export const localAppBaseUrl = "http://localhost:41411";
 export const localWebsiteBaseUrl = "http://localhost:41410";
+export const productionApiBaseUrl = "https://api.commentvia.com";
+export const productionAppBaseUrl = "https://app.commentvia.com";
+export const productionWebsiteBaseUrl = "https://commentvia.com";
 
 const viteEnv = () => (import.meta as ImportMetaWithEnv).env;
 
@@ -62,14 +65,32 @@ export const isLocal =
 
 export const isLive = !isLocal;
 
+const getLocalBrowserBaseUrl = (port: number) => {
+	try {
+		const browserWindow = globalThis as typeof globalThis & {
+			location?: { hostname?: string; protocol?: string };
+		};
+		if (browserWindow.location?.hostname && browserWindow.location.protocol) {
+			return `${browserWindow.location.protocol}//${browserWindow.location.hostname}:${port}`;
+		}
+	} catch {
+		// Fall through to the non-browser loopback default.
+	}
+
+	return `http://${"127.0.0.1"}:${port}`;
+};
+
 export const getDefaultApiBaseUrl = () =>
-	viteEnv()?.VITE_API_URL ?? localApiBaseUrl;
+	viteEnv()?.VITE_API_URL ??
+	(isLive ? productionApiBaseUrl : getLocalBrowserBaseUrl(41412));
 
 export const getDefaultAppBaseUrl = () =>
-	viteEnv()?.VITE_APP_URL ?? localAppBaseUrl;
+	viteEnv()?.VITE_APP_URL ??
+	(isLive ? productionAppBaseUrl : getLocalBrowserBaseUrl(41411));
 
 export const getDefaultWebsiteBaseUrl = () =>
-	viteEnv()?.VITE_WEBSITE_URL ?? localWebsiteBaseUrl;
+	viteEnv()?.VITE_WEBSITE_URL ??
+	(isLive ? productionWebsiteBaseUrl : getLocalBrowserBaseUrl(41410));
 
 export const trimTrailingSlash = (value: string) => value.replace(/\/+$/, "");
 

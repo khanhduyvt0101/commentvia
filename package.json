@@ -24,6 +24,8 @@
 		"build:api": "bun --filter '@commentvia/api' build",
 		"build:app": "bun --filter '@commentvia/spa' build",
 		"build:website": "bun --filter '@commentvia/website' build",
+		"verify:build": "bun scripts/verify-prod-build.ts",
+		"verify:prod": "bun scripts/verify-prod-domains.ts",
 		"docker:api:prepare": "bun scripts/prepare-docker-image.ts",
 		"typecheck": "tsc -b",
 		"typecheck:api": "bun --filter '@commentvia/api' typecheck",

@@ -25,6 +25,16 @@ jobs:
       - name: Typecheck
         run: bun run typecheck
       - name: Build
+        env:
+          REQUIRE_PROD_URLS: "true"
+          VITE_API_URL: https://api.commentvia.com
+          VITE_APP_URL: https://app.commentvia.com
+          VITE_COMMENTVIA_LOCAL: "false"
+          VITE_WEBSITE_URL: https://commentvia.com
         run: bun run build
+      - name: Verify production build artifacts
+        env:
+          REQUIRE_PROD_URLS: "true"
+        run: bun run verify:build
       - name: Prepare API Docker context
         run: bun run docker:api:prepare

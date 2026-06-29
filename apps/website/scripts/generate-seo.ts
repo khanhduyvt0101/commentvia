@@ -352,7 +352,9 @@ function preservedHeadAssets(template: string) {
 
 function renderHtml(template: string, language: Language, page: PageSlug) {
 	const assets = preservedHeadAssets(template);
-	const head = [headHtml(language, page), assets].filter(Boolean).join("\n\t\t");
+	const head = [headHtml(language, page), assets]
+		.filter(Boolean)
+		.join("\n\t\t");
 
 	return template
 		.replace(
