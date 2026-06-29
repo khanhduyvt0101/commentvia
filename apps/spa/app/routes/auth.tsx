@@ -1,7 +1,6 @@
 import type { PlatformReadiness } from "@commentvia/client";
 import { authClient } from "@commentvia/client/auth";
 import { orpc } from "@commentvia/client/orpc";
-import type { SocialProvider } from "better-auth/social-providers";
 import {
 	AuthUIProvider,
 	AuthView,
@@ -45,10 +44,16 @@ export default function AuthRoute() {
 		new URLSearchParams(location.search).get("redirectTo") ?? "/";
 	const localization = authLocalizationByLanguage[getResolvedLanguage()];
 	const authCallbackUrl = redirectTo.startsWith("/") ? redirectTo : "/";
-	const socialProviders: SocialProvider[] = [
-		...(readiness.google.enabled ? (["google"] as const) : []),
-		...(readiness.meta.enabled ? (["facebook"] as const) : []),
-	];
+	const socialProviders: SocialOptions["providers"] = [];
+
+	if (readiness.google.enabled) {
+		socialProviders.push("google");
+	}
+
+	if (readiness.meta.enabled) {
+		socialProviders.push("facebook");
+	}
+
 	const social: SocialOptions | undefined = socialProviders.length
 		? {
 				providers: socialProviders,
