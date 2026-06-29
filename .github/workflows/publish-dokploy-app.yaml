@@ -1,0 +1,70 @@
+name: Publish Dokploy app
+
+on:
+  workflow_call:
+    secrets:
+      DOKPLOY_API_KEY:
+        required: true
+      SENTRY_AUTH_TOKEN:
+        required: false
+    inputs:
+      project:
+        type: string
+        required: true
+      dokploy-app-id:
+        type: string
+        required: true
+      sentry-dsn:
+        type: string
+        default: ""
+
+jobs:
+  prepare:
+    name: Prepare Docker context
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: ./.github/actions/prepare
+      - id: compile
+        run: bun scripts/prepare-docker-image.ts
+      - uses: actions/upload-artifact@v4
+        with:
+          name: docker-context
+          path: apps/api/dist/*_docker.tar.gz
+          retention-days: 1
+
+  publish-docker-image:
+    name: Publish Docker image
+    needs: [prepare]
+    uses: ./.github/workflows/publish-docker-image.yaml
+    secrets: inherit
+    permissions:
+      contents: read
+      actions: write
+      packages: write
+    with:
+      project: ${{ inputs.project }}
+      sentry-dsn: ${{ inputs.sentry-dsn }}
+
+  trigger-dokploy-deployment:
+    name: Trigger Dokploy deployment
+    needs: [publish-docker-image]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: ./.github/actions/trigger-dokploy-deployment
+        with:
+          api-key: ${{ secrets.DOKPLOY_API_KEY }}
+          app-id: ${{ inputs.dokploy-app-id }}
+
+  finalize-sentry-release:
+    name: Finalize Sentry release
+    needs: [publish-docker-image]
+    uses: ./.github/workflows/finalize-sentry-release.yaml
+    secrets: inherit
+    with:
+      project: ${{ inputs.project }}
+      dsn: ${{ inputs.sentry-dsn }}
+      url: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}/attempts/${{ github.run_attempt }}
+      id: docker-${{ github.run_id }}-${{ github.run_attempt }}
+      environment: docker-production

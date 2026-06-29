@@ -1,0 +1,56 @@
+name: Finalize Sentry release
+
+on:
+  workflow_call:
+    secrets:
+      SENTRY_AUTH_TOKEN:
+        required: false
+    inputs:
+      dsn:
+        type: string
+        default: ""
+      project:
+        type: string
+        required: true
+      url:
+        type: string
+        required: true
+      id:
+        type: string
+        required: true
+      environment:
+        type: string
+        required: true
+
+jobs:
+  finalize-sentry-release:
+    if: inputs.dsn != ''
+    name: Finalize Sentry release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          sparse-checkout: apps/api/package.json
+          sparse-checkout-cone-mode: false
+      - id: version
+        run: echo "version=$(jq -r .version apps/api/package.json)" >> "$GITHUB_OUTPUT"
+      - name: Cache Sentry CLI
+        id: sentry-cli-cache
+        uses: actions/cache@v5
+        with:
+          path: /usr/local/bin/sentry-cli
+          key: sentry-cli-${{ runner.os }}
+      - name: Install Sentry CLI
+        if: steps.sentry-cli-cache.outputs.cache-hit != 'true'
+        run: curl -sL https://sentry.io/get-cli | sh
+      - name: Create and finalize Sentry release
+        run: |
+          sentry-cli releases new "$SENTRY_RELEASE" --url '${{ inputs.url }}'
+          sentry-cli releases set-commits "$SENTRY_RELEASE" --auto --ignore-missing
+          sentry-cli releases finalize "$SENTRY_RELEASE" --url '${{ inputs.url }}'
+          sentry-cli deploys new -r "$SENTRY_RELEASE" -u '${{ inputs.url }}' -n '${{ inputs.id }}' -e '${{ inputs.environment }}'
+        env:
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_ORG: ${{ vars.SENTRY_ORG }}
+          SENTRY_PROJECT: ${{ inputs.project }}
+          SENTRY_RELEASE: ${{ inputs.project }}@${{ steps.version.outputs.version }}

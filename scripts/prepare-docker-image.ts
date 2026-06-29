@@ -135,7 +135,16 @@ await Bun.write(
 	`${apiRoot}/dist/docker/Dockerfile`,
 	`FROM oven/bun:1-slim
 
-ENV NODE_ENV=production
+ARG SENTRY_DSN=""
+ARG SENTRY_RELEASE=""
+ARG SENTRY_DIST=""
+ARG SENTRY_ENVIRONMENT=""
+
+ENV NODE_ENV=production \\
+    SENTRY_DSN=\${SENTRY_DSN} \\
+    SENTRY_RELEASE=\${SENTRY_RELEASE} \\
+    SENTRY_DIST=\${SENTRY_DIST} \\
+    SENTRY_ENVIRONMENT=\${SENTRY_ENVIRONMENT}
 
 RUN apt-get update \\
   && apt-get install -y --no-install-recommends curl ca-certificates \\
