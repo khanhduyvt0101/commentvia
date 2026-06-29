@@ -1,6 +1,7 @@
 import type { PlatformReadiness } from "@commentvia/client";
 import { authClient } from "@commentvia/client/auth";
 import { orpc } from "@commentvia/client/orpc";
+import type { SocialProvider } from "better-auth/social-providers";
 import {
 	AuthUIProvider,
 	AuthView,
@@ -44,27 +45,24 @@ export default function AuthRoute() {
 		new URLSearchParams(location.search).get("redirectTo") ?? "/";
 	const localization = authLocalizationByLanguage[getResolvedLanguage()];
 	const authCallbackUrl = redirectTo.startsWith("/") ? redirectTo : "/";
-	const social: SocialOptions = {
-		providers: ["google", "facebook"],
-		signIn: (params) => {
-			if (params.provider === "google" && !readiness.google.enabled) {
-				throw new Error("Google sign-in is not configured.");
+	const socialProviders: SocialProvider[] = [
+		...(readiness.google.enabled ? (["google"] as const) : []),
+		...(readiness.meta.enabled ? (["facebook"] as const) : []),
+	];
+	const social: SocialOptions | undefined = socialProviders.length
+		? {
+				providers: socialProviders,
+				signIn: (params) =>
+					authClient.signIn.social({
+						...params,
+						callbackURL: params.callbackURL ?? authCallbackUrl,
+						scopes:
+							params.provider === "google"
+								? readiness.google.scopes.map((scope) => scope.name)
+								: ["email", "public_profile"],
+					}),
 			}
-
-			if (params.provider === "facebook" && !readiness.meta.enabled) {
-				throw new Error("Facebook sign-in is not configured.");
-			}
-
-			return authClient.signIn.social({
-				...params,
-				callbackURL: params.callbackURL ?? authCallbackUrl,
-				scopes:
-					params.provider === "google"
-						? readiness.google.scopes.map((scope) => scope.name)
-						: ["email", "public_profile"],
-			});
-		},
-	};
+		: undefined;
 
 	return (
 		<AuthUIProvider
