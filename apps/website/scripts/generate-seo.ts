@@ -336,16 +336,30 @@ function headHtml(language: Language, page: PageSlug) {
 		<title>${escapeHtml(title)}</title>`;
 }
 
+function preservedHeadAssets(template: string) {
+	const head = template.match(/<head>([\s\S]*?)<\/head>/)?.[1] ?? "";
+	return head
+		.split("\n")
+		.map((line) => line.trim())
+		.filter(
+			(line) =>
+				line.startsWith('<link rel="modulepreload"') ||
+				line.startsWith('<link rel="stylesheet"') ||
+				line.startsWith('<script type="module"'),
+		)
+		.join("\n\t\t");
+}
+
 function renderHtml(template: string, language: Language, page: PageSlug) {
+	const assets = preservedHeadAssets(template);
+	const head = [headHtml(language, page), assets].filter(Boolean).join("\n\t\t");
+
 	return template
 		.replace(
 			/<html[^>]*>/,
 			`<html lang="${language}" dir="${language === "ar" ? "rtl" : "ltr"}">`,
 		)
-		.replace(
-			/<head>[\s\S]*?<\/head>/,
-			`<head>\n\t\t${headHtml(language, page)}\n\t</head>`,
-		);
+		.replace(/<head>[\s\S]*?<\/head>/, `<head>\n\t\t${head}\n\t</head>`);
 }
 
 function sitemapXml() {
